@@ -1,0 +1,185 @@
+//animation-1
+@-webkit-keyframes shake-animation {
+    0% { transform:translate(0,0) }
+   1.78571% { transform:translate(5px,0) }
+   3.57143% { transform:translate(0,0) }
+   5.35714% { transform:translate(5px,0) }
+   7.14286% { transform:translate(0,0) }
+   8.92857% { transform:translate(5px,0) }
+   10.71429% { transform:translate(0,0) }
+   100% { transform:translate(0,0) }
+}
+
+@keyframes shake-animation {
+    0% { transform:translate(0,0) }
+   1.78571% { transform:translate(5px,0) }
+   3.57143% { transform:translate(0,0) }
+   5.35714% { transform:translate(5px,0) }
+   7.14286% { transform:translate(0,0) }
+   8.92857% { transform:translate(5px,0) }
+   10.71429% { transform:translate(0,0) }
+   100% { transform:translate(0,0) }
+}
+
+//animation-2
+@-webkit-keyframes color-WhiteToYellow {
+	0%{
+        color: $white;
+	}
+	50%{
+        color: $darkyellows;
+	}
+	75%{
+        color: $darkyellows;
+	}
+	100%{
+        color: $white;
+	}
+}
+
+@keyframes color-WhiteToYellow {
+	0%{
+        color: $white;
+	}
+	50%{
+        color: $darkyellows;
+	}
+	75%{
+        color: $darkyellows;
+	}
+	100%{
+        color: $white;
+	}
+}
+
+//animation-3
+@-webkit-keyframes color-YellowToWhite {
+	0%{
+        color: $darkyellows;
+	}
+	50%{
+        color: $white;
+	}
+	75%{
+        color: $white;
+	}
+	100%{
+        color: $darkyellows;
+	}
+}
+
+@keyframes color-YellowToWhite {
+	0%{
+        color: $darkyellows;
+	}
+	50%{
+        color: $white;
+	}
+	75%{
+        color: $white;
+	}
+	100%{
+        color: $darkyellows;
+	}
+}
+
+//animation-4
+
+// @-webkit-keyframes color-BlueToWhite {
+// 	0%{
+//         color: $blue;
+// 	}
+// 	50%{
+//         color: $white;
+// 	}
+// 	75%{
+//         color: $white;
+// 	}
+// 	100%{
+//         color: $blue;
+// 	}
+// }
+
+// @keyframes color-BlueToWhite {
+// 	0%{
+//         color: $blue;
+// 	}
+// 	50%{
+//         color: $white;
+// 	}
+// 	75%{
+//         color: $white;
+// 	}
+// 	100%{
+//         color: $blue;
+// 	}
+// }
+
+//animation-5
+@keyframes bgcolor-YellowToWhite {
+	0%{
+        background: $darkyellows;
+	}
+	50%{
+        background: $white;
+	}
+	75%{
+        background: $white;
+	}
+	100%{
+        background: $darkyellows;
+	}
+}
+
+@keyframes color-BlackToYellow {
+	0%{
+        color: $black;
+	}
+	50%{
+        color: $darkyellow;
+	}
+	75%{
+        color: $darkyellow;
+	}
+	100%{
+        color: $black;
+	}
+}
+//animation-6
+@-webkit-keyframes border-LeftToRight {
+	0%{
+		width: 0px;
+        background: $blue;
+	}
+	50%{
+		width: 45px;
+        background: $darkyellows;
+	}
+	75%{
+		width: 45px;
+        background: $darkyellows;
+	}
+	100%{
+		width: 0px;
+        background: $blue;
+	}
+}
+
+@keyframes border-LeftToRight {	
+    0%{
+		width: 0px;
+        background: $blue;
+	}
+	50%{
+		width: 45px;
+        background: $darkyellows;
+	}
+	75%{
+		width: 45px;
+        background: $darkyellows;
+	}
+	100%{
+		width: 0px;
+        background: $blue;
+	}
+}

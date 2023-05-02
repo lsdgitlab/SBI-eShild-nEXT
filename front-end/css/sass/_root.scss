@@ -1,0 +1,8 @@
+:root{
+    --#{$variable-prefix}font-sfpro: #{inspect($font-family-sfpro)};
+
+    --#{$variable-prefix}bd-font-family: #{$font-family-base};
+    --#{$variable-prefix}bd-font-size: #{$font-size};
+    --#{$variable-prefix}bd-font-weight: #{$font-weight-normal};
+    --#{$variable-prefix}bd-line-height: #{$line-height};
+}

@@ -1,0 +1,107 @@
+footer{
+    background: $white;
+    .container{
+        border-top: 1px solid #e2e2e2;
+        max-width: 1180px;
+    }
+    .di-block {
+            width: 33.33%;
+            padding: 15px 0 20px;
+            &.vis-desk{
+                @include di-block();
+            }
+            &.vis-mob{
+                display: none;
+            }
+    
+            &:first-child {
+                p {
+                    text-align: left;
+                }
+            }
+    
+            &:last-child {
+                text-align: right;
+    
+                p {
+                    text-align: right;
+                }
+            }
+        }
+    p{
+        color: $gray;
+        // font-family: $font-family-gil-lt;
+        font-size: 12px;
+        // text-align: left;
+        text-align: center;
+        margin: 0 0 20px;
+    }
+    .footer-link{
+        @include unordered-list();
+        li{
+            @include di-block();
+            @include valign-middle();
+            @include pos-relative();
+            font-size: 12px;
+            line-height: 1;
+            margin: 0 8px;
+            &:first-child::after{
+                content: "";
+                background: $gray;
+                position: absolute;
+                right: -8px;
+                top: 50%;
+                margin-top: -6px;
+                width: 1px;
+                height: 100%;
+            }
+            a{
+                color: $gray;
+                padding: 0 5px;
+            }
+            
+        }
+    }
+    
+}
+
+
+@media only screen and (max-width:991px){
+    footer{        
+        .container{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .di-block{
+            width: 100%;
+            text-align: center !important;
+            padding: 0 !important;
+            &.vis-desk{
+                display: none;
+            }
+            &.vis-mob{
+                display: block;
+            }
+            p{
+                margin-bottom: 0 !important;
+            }
+            // &:first-child, &:last-child{
+            //     p{
+            //         margin-bottom: 0;
+            //     }
+            // }            
+            p {
+                text-align: center !important;
+            }
+    
+           
+        }
+
+        .footer-link{
+            li{
+
+            }
+
+        }
+    }
+}
