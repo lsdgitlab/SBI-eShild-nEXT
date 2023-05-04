@@ -771,7 +771,7 @@ footer .footer-link li a {
   background: #2a1f75;
   padding: 40px 0 25px;
 }
-.card-sect p {
+.card-sect p.top-para {
   color: #fff;
   font-size: 16px;
   line-height: 30px;
@@ -810,6 +810,10 @@ footer .footer-link li a {
   padding: 20px 28px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  min-height: 178px;
+}
+.card-sect .cards .card .content.show {
+  transition: height 0.1s ease-in;
 }
 .card-sect .cards .card .content h3 {
   color: #2a1f75;
@@ -822,6 +826,8 @@ footer .footer-link li a {
   padding: 0;
   margin: 0;
   list-style: outside none none;
+  height: 56px;
+  overflow: hidden;
 }
 .card-sect .cards .card .content ul li {
   color: #2a1f75;
@@ -830,6 +836,11 @@ footer .footer-link li a {
   padding-left: 14px;
   margin-bottom: 14px;
   position: relative;
+  opacity: 0;
+}
+.card-sect .cards .card .content ul li:first-child {
+  display: block;
+  opacity: 1;
 }
 .card-sect .cards .card .content ul li::before {
   content: "";
@@ -841,6 +852,26 @@ footer .footer-link li a {
   width: 6px;
   height: 6px;
   border-radius: 25px;
+}
+.card-sect .cards .card .content ul li.show {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+.card-sect .cards .card .content ul.show {
+  height: 100%;
+  overflow: visible;
+  transition: height 0.1s ease-in;
+}
+.card-sect .cards .card .content .read-more, .card-sect .cards .card .content .read-less {
+  color: #291f75;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.card-sect .cards .card .content .read-more {
+  display: block;
+}
+.card-sect .cards .card .content .read-less {
+  display: none;
 }
 
 .benefit-sect {
@@ -862,7 +893,7 @@ footer .footer-link li a {
 }
 .benefit-sect .benefit-cat h2 {
   color: #291f75;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 1;
   padding: 0 40px;
@@ -980,6 +1011,7 @@ footer .footer-link li a {
     padding: 0;
     margin: 0;
     list-style: outside none none;
+    background: #fff;
   }
   .benefit-sect .tabs-container nav ul li {
     color: #291f75;
@@ -1006,7 +1038,7 @@ footer .footer-link li a {
     border: none;
   }
   .benefit-sect .tab-content {
-    padding: 46px;
+    padding: 52px 46px;
   }
 }
 .benefit-sect .tab-content {
@@ -1019,7 +1051,7 @@ footer .footer-link li a {
   color: #291f75;
   font-size: 24px;
   margin-top: 0;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   line-height: 1;
 }
 .benefit-sect .tab-content p {
@@ -1033,6 +1065,9 @@ footer .footer-link li a {
 .benefit-sect .tab-content p.m-0 {
   margin: 0;
 }
+.benefit-sect .tab-content p.list-ttl {
+  margin-bottom: 20px;
+}
 .benefit-sect .tab-content .bullet {
   width: 5px;
   height: 5px;
@@ -1044,7 +1079,7 @@ footer .footer-link li a {
   margin-right: 10px;
 }
 .benefit-sect .tab-content .list {
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 }
 .benefit-sect .tab-content .list:last-child {
   margin-bottom: 0;
@@ -1059,6 +1094,7 @@ footer .footer-link li a {
 .benefit-sect .tab-content .unorderd-list li {
   position: relative;
   padding-left: 10px;
+  margin-bottom: 8px;
 }
 .benefit-sect .tab-content .unorderd-list li::before {
   content: "";

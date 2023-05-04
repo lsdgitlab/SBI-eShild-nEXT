@@ -4,6 +4,21 @@ $(document).ready(function(){
         $('.menu').toggleClass('menu-opened');
     });
 
+    $('.cards .content .read-more').click(function(){
+        $('.cards .content').addClass('show');
+        $('.cards .content ul').addClass('show');
+        $('.cards .content ul li').addClass('show');
+        $('.read-more').hide();        
+        $('.read-less').show();
+    });
+    $('.cards .content .read-less').click(function(){
+        $('.cards .content').removeClass('show');
+        $('.cards .content ul').removeClass('show');
+        $('.cards .content ul li').removeClass('show');
+        $('.read-less').hide();
+        $('.read-more').show();        
+    });
+
     $(document).on('click', '.tabs li', function(){
         $('li').removeClass('active');
         $('ul').toggleClass('expanded');

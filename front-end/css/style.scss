@@ -281,7 +281,7 @@
 .card-sect{    
     background: $darkblue;
     padding: 40px 0 25px;    
-    p{
+    p.top-para{
         color: $white;
         font-size: 16px;
         line-height: 30px;
@@ -321,6 +321,12 @@
                 padding: 20px 28px;
                 border-bottom-left-radius: 20px;
                 border-bottom-right-radius: 20px;
+                // min-height: 165px;
+                min-height: 178px;
+                &.show{
+                    // min-height: 100%;
+                    transition: height 0.1s ease-in;
+                }
                 h3{
                     color: $darkblue;
                     font-size: 24px;
@@ -330,6 +336,8 @@
                 }
                 ul{
                     @include unordered-list();
+                    height: 56px;
+                    overflow: hidden;
                     li{
                         color: $darkblue;
                         font-size: 14px;
@@ -337,6 +345,9 @@
                         padding-left: 14px;
                         margin-bottom: 14px;
                         @include pos-relative();
+                        // display: none;
+                        opacity: 0;
+                        &:first-child{display: block;opacity: 1;}
                         &::before{
                             content: "";
                             background: $pink;
@@ -348,8 +359,34 @@
                             height: 6px;
                             @include border-radius(25px);
                         }
+                        // &:last-child{
+                        //     margin-bottom: 0;
+                        // }
+                        &.show{ 
+                            // display: block; 
+                            opacity: 1;
+                            transition: opacity 1s ease-in;
+                            // @include transition();
+                        }
+                        
                     }
+                    &.show{
+                        height: 100%;
+                        overflow: visible;
+                        transition: height 0.1s ease-in;
+                        
+                    }
+                }                
+                .read-more, .read-less{
+                    color: $blue;
+                    font-weight: 600;
+                    // margin-top: 10px;
+                    text-transform: capitalize;
                 }
+                .read-more{
+                    display: block;
+                }
+                .read-less{ display: none;}
             }
         }
     }
@@ -379,7 +416,7 @@
         border-left: 2px solid $pink;         
         h2{
             color: $blue;
-            font-size: 32px;
+            font-size: 24px;
             font-weight: 600;
             line-height: 1;            
             padding: 0 40px;
@@ -431,7 +468,7 @@
             color: $blue;
             font-size: 24px;
             margin-top: 0;
-            margin-bottom: 28px;
+            margin-bottom: 20px;
             line-height: 1;
         }
         p{
@@ -443,6 +480,9 @@
             }
             &.m-0{
                 @include m-0();
+            }
+            &.list-ttl{
+                margin-bottom: 20px;
             }
         }
         .bullet{
@@ -456,7 +496,7 @@
             @include bullet();
         }
         .list{
-            margin-bottom: 28px;
+            margin-bottom: 22px;
             &:last-child {
                 margin-bottom: 0;
             }
@@ -482,6 +522,7 @@
             li{
                 @include pos-relative();
                 padding-left: 10px;
+                margin-bottom: 8px;
                 &::before{
                     content: "";
                     position: absolute;
