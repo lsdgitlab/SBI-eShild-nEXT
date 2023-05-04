@@ -2,15 +2,14 @@
 
 }
 
-
-@media only screen and (max-width:1111px){
+@media only screen and (max-width:1197px){
     .top-section{
         .rightside{
             .top-form-area{
                 .form-area{
                     .form-group{
-                        padding-right: 15px;                    
-                        margin-bottom: 34px;
+                        // padding-right: 15px;                    
+                        // margin-bottom: 38px;
                     }    
                 }
             }            
@@ -19,11 +18,162 @@
 }
 
 
+@media only screen and (max-width:1111px){
+    .top-section{
+        .rightside{
+            .top-form-area{
+                .form-area{
+                    .form-group{
+                        padding-right: 15px;                    
+                        // margin-bottom: 34px;
+                    }    
+                }
+            }            
+        }
+    }//top-section end
+}
+
+@media only screen and (max-width:1079px){
+    .top-section{
+
+        .leftside{
+            .top{
+                padding: 43px 30px 32px;
+                ul{
+                    li{    
+                        &:first-child{ margin-right: 15px;}                    
+                        p{
+                            &:first-child{ font-size: 18px; }
+        
+                        }
+                    }
+                }
+            }
+        }
+
+        .rightside{
+            .bottom-benefit{
+                .bnft-list-sect{
+                    .bnft-ttl{ 
+                        width: 160px;
+                    }
+                    
+                    
+                }
+    
+            }
+        }
+    }//top-section end    
+    
+
+}
+
+
 @media only screen and (max-width:1023px){
 
 }
 
 @media only screen and (max-width:991px){
+
+    .top-section{
+        padding-top: 0;
+        margin-top: 78px;
+        &::before{
+            display: none;     
+        }
+        .container{
+            padding: 0;
+        }
+       
+        
+        .leftside{
+            width: 100%;
+            .top{          
+                border-top-left-radius: 0;                
+            }
+            .middle{                
+                height: 250px;
+                background-color: $black-blue;
+                background-size: contain;
+        
+            }
+            .bottom{   
+                height: 100%;
+                border-bottom-left-radius: 0;
+                p{ 
+                    font-size: 9px;
+                }
+            }
+        }    
+    
+        .rightside{
+            width: 100%;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            .top-form-area{
+                padding:35px 35px;
+                border-top-right-radius: 0;
+                height: auto;
+                .form-area{
+                    @include f-0();
+                    margin-top: 25px;
+                    .form-group{
+                        padding-right: 0;                    
+                        margin-bottom: 30px;
+                        display: block;
+                        width: 100%;                        
+                    }
+                    .btn-submit{
+                        font-size: $font-size-base;
+                        font-weight: 100;
+                        line-height: 48px;
+                        width: 150px;
+                        margin-top: 20px;                
+                    }
+    
+                }
+            }
+            .bottom-benefit{                
+                border-bottom-right-radius: 0;
+                .bnft-list-sect{
+                    @include f-0();                
+                    .bnft-ttl{ 
+                        width: 100%;
+                        display: block;
+                        
+                        p{
+                            font-size: 24px;
+                            font-weight: 600;
+                            margin-bottom: 15px;
+                        }
+                        
+                    }
+                    .bnft-list{
+                        display: block; 
+                        padding-right: 0; 
+                        margin-bottom: 5px;
+                        &:last-child {
+                            padding-right: 0;
+                            margin-bottom: 0;
+                        }
+                        
+                        li{
+                            font-size: 12px;
+                            font-weight: 600;
+                            padding-left: 19px;
+                            margin-bottom: 5px;
+                        }
+                        
+                    }
+                    
+                }
+    
+            }
+        }
+    
+        
+    }//top-section end
+
         
     .benefit-sect{
         padding: 30px 0 30px; 
@@ -50,6 +200,69 @@
 
 @media only screen and (max-width:767px){
 
+    .top-section{      
+        
+        .leftside{
+            .top{
+                padding: 32px 15px 32px;                          
+            }
+            .middle{   
+        
+            }
+            .bottom{ 
+                padding: 30px 30px;                  
+            }
+        }    
+    
+        .rightside{
+            .top-form-area{
+                padding: 35px 15px;
+                p{
+                    color: $blue;
+                    font-size: 22px;
+                    line-height: 26px;
+                    font-weight: 600;
+                }
+                .form-area{
+                    .form-group{                       
+                       
+                        label{  
+                            margin-bottom: 5px;
+                        }
+                        input, select{
+                            padding-bottom: 12px;
+                        }
+    
+                    }
+    
+                    .check {
+                        label{  
+                            &::before{
+                                margin-right: 15px;
+                            }
+                            span{
+                                width: calc(100% - 31px);
+                            }
+                        }
+                        
+                    }
+    
+                    .btn-submit{   
+                        width: 100%;  
+                        margin-top: 32px;    
+                    }
+    
+                }
+            }
+            .bottom-benefit{
+                padding: 20px 15px;
+            }
+        } 
+        
+    }//top-section end
+
+
+
     .card-sect{ 
         padding: 30px 0 35px;   
         p{
@@ -67,6 +280,9 @@
                 margin-right: 0;
                 &:last-child{
                     margin-bottom: 0;
+                }
+                .content{
+                    padding: 20px 20px;
                 }
                 
             }
@@ -89,6 +305,20 @@
 
 }
 
-@media only screen and (max-width:320px){
+@media only screen and (max-width:379px){
+
+    .top-section{      
+        
+        .leftside{            
+            .middle{   
+                // height: auto;
+            }            
+        }
+
+    }
     
+}
+
+@media only screen and (max-width:320px){
+
 }

@@ -46,7 +46,8 @@
             ul{
                 @include unordered-list();
                 @include f-0();
-                margin-bottom: 10px;
+                // margin-bottom: 10px;
+                margin-bottom: 11px;
                 &:last-child{ margin-bottom: 0}
                 li{
                     @include di-block();
@@ -58,7 +59,7 @@
                     p{
                         color: $white;
                         line-height:1;                    
-                        &:first-child{ font-size: 20px; margin-bottom: 4px;}
+                        &:first-child{ font-size: 20px; font-weight: 600; margin-bottom: 4px;}
                         &:last-child{ font-size: 14px; }
     
                     }
@@ -66,11 +67,17 @@
             }
         }
         .middle{
+            background: transparent url('../img/why-choose-us.jpg') scroll no-repeat top center;
+            -webkit-background-size: cover;
+            background-size: cover;
+            height: 250px;
     
         }
         .bottom{
             background: $black-blue;
-            padding: 38px 30px;
+            // padding: 38px 30px;
+            padding: 30px 30px;
+            height: 160px;
             border-bottom-left-radius: 20px;
             p{ 
                 color: $white; font-size: 8px; text-align: center; line-height:14px; margin: 0 0 7px;
@@ -89,6 +96,7 @@
             background:$white;
             padding:40px 40px;
             border-top-right-radius: 20px;
+            height: 581px;
             p{
                 font-size: 26px;
                 line-height: 36px;
@@ -103,9 +111,11 @@
                 margin-top: 25px;
                 .form-group{
                     padding-right: 40px;                    
-                    margin-bottom: 34px;
+                    // margin-bottom: 34px;
+                    margin-bottom: 44px;
                     @include di-block();
-                    @include valign-middle();
+                    // @include valign-middle();
+                    @include valign-bottom();
                     width: 33%;
                     @include pos-relative();
                     &:nth-of-type(3n){
@@ -121,6 +131,7 @@
                         margin: 0 0 10px;
                     }
                     input, select{
+                        background: $white;
                         display: block;
                         color: $blue;
                         font-size: 14px;
@@ -207,7 +218,8 @@
         }
         .bottom-benefit{
             background: $skybluedark;
-            padding: 40px 40px;
+            // padding: 40px 40px;
+            padding: 39px 40px;
             border-bottom-right-radius: 20px;
             .bnft-list-sect{
                 @include f-0();                
@@ -228,7 +240,11 @@
                     @include unordered-list();
                     @include di-block();
                     @include valign-middle();
-                    padding-right: 40px;               
+                    // padding-right: 40px;   
+                    padding-right: 6.6%; 
+                    &:last-child {
+                        padding-right: 0;
+                    }
                     
                     li{
                         color: $blue;
@@ -319,7 +335,7 @@
                         font-size: 14px;
                         line-height: 20px;
                         padding-left: 14px;
-                        margin-bottom: 16px;
+                        margin-bottom: 14px;
                         @include pos-relative();
                         &::before{
                             content: "";
@@ -393,6 +409,7 @@
             // height: calc(100% - 4px);
             height: 90%;
             overflow-y: auto;
+            scrollbar-width:thin;scroll-behavior:smooth;
             &::-webkit-scrollbar {
                 width: 3px;
             }             

@@ -51,6 +51,9 @@
 @mixin valign-middle {
     vertical-align: middle;
 }
+@mixin valign-bottom{
+    vertical-align: bottom;
+}
 @mixin vertical-center{
     position: absolute;
     left: 50%;

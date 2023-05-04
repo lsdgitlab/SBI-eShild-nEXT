@@ -1,4 +1,8 @@
 $(document).ready(function(){
+    $(".hamburger").on('click', function(){
+        $(this).toggleClass('menu-opened');
+        $('.menu').toggleClass('menu-opened');
+    });
 
     $(document).on('click', '.tabs li', function(){
         $('li').removeClass('active');
