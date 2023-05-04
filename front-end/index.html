@@ -53,14 +53,14 @@
                         </li>
                     </ul>
                     <ul>
-                        <li><img src="img/icon-1.png" alt=""></li>
+                        <li><img src="img/icon-2.png" alt=""></li>
                         <li>
                             <p>Over Rs. 1,52,828 Cr.</p>
                             <p>Claims paid till date<sup>*</sup></p>
                         </li>
                     </ul>
                     <ul>
-                        <li><img src="img/icon-1.png" alt=""></li>
+                        <li><img src="img/icon-3.png" alt=""></li>
                         <li>
                             <p>970+ Branches</p>
                             <p>Across India #</p>
@@ -87,7 +87,7 @@
                                 <input type="text" name="fullname" value="" id="fullname">
                             </div>
                             <div class="form-group">
-                                <label>Mobile Number*</label>
+                                <label id="mblLabel">Mobile Number*</label>
                                 <input type="text" name="mobile" value="" id="mobile">
                             </div>
                             <div class="form-group">
@@ -101,9 +101,10 @@
                             <div class="form-group">
                                 <label>Your Gender*</label>
                                 <select name="gender" id="gender">
-                                    <option value="0">Male</option>
-                                    <option value="1">Female</option>
-                                    <option value="2">Other</option>
+                                    <option value="Select the Gender">Select the Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -124,9 +125,8 @@
                             <div class="form-group">
                                 <label>State</label>
                                 <select id="state" name="state">
-                                    <option value="0">Maharashtra</option>
-                                    <option value="1">Gujrat</option>
-                                    <option value="2">Karnataka</option>
+                                    <option value="Select the State">Select the State</option>
+                                    
                                 </select>
                             </div>
                             <div class="form-group">
@@ -136,7 +136,7 @@
                                     <option value="0">Yes</option>
                                 </select>
                             </div>
-                            <div class="check">
+                            <div class="check labelcolor">
                                 <input type="checkbox" name="tandc" id="condition" class="checkbx">
                                 <label for="condition"><span>I accept SBI Life's Privacy policy and by submitting my contact details here, I override my NCPR registration and authorise SBl Life and its authorised representatives to contact me and send information/communication relating to this proposal/or the resulting policy through SMS /Email /Phone /Letter /WhatsApp /any other electronic mode of communication to my registered email id/mobile number.</span></label>
                             </div>
@@ -246,7 +246,14 @@ growing cover, terminal illness benefit & rider option of two rider</p>
                     </div>
                     <div id="tab-2" class="tab-content">
                         <h2 class="benefit-title">Mode of Payment Benefit</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, iusto repellat odit, sequi reprehenderit repellendus eaque eius ratione dolorem incidunt inventore obcaecati voluptate ipsa perspiciatis quidem mollitia error magnam earum!</p>
+                        <p class="m-0">The death benefit would be payable in one of the payment mode options as per below:</p>
+                       <ul class="list unorderd-list">
+                            <li>Lumpsum:  Death benefit will be payable in Lumpsum</li>
+                            <li>Monthly Installments: A specific percentage of Death Benefit will be payable for a period of 5 years. The payment of the monthly instalment will start from the policy monthiversary following the death of claim acceptance of the Life Assured.</li>
+                            <li>Lumpsum + Monthly Instalment: 50% of death benefit will be payable as lumpsum  and 50% of the death benefit will be payable as monthly instalment.</li>
+                            <li>The monthly instalment is a specific percentage of 50% of the death benefit will be payable every month for a period of 5 years</li>
+                            <li>The payment of the monthly instalment will start from the policy monthiversary following the death of claim acceptance of the Life Assured.</li>
+                        </ul>
                     </div>
                     <div id="tab-3" class="tab-content">
                         <h2 class="benefit-title">Better Half Benefit</h2>
@@ -262,7 +269,10 @@ growing cover, terminal illness benefit & rider option of two rider</p>
                     </div>
                     <div id="tab-5" class="tab-content">
                         <h2 class="benefit-title">Additional Coverage Through Riders</h2>
-                        <p>Lorem ipsum dolor sit amet, consect</p>
+                        <ul class="list unorderd-list">
+                            <li>Accidental death benefit rider</li>
+                            <li>Accidental total & permanent disability rider</li>
+                        </ul>
                     </div>
                     <div id="tab-6" class="tab-content">
                         <h2 class="benefit-title">Tax Benefit</h2>
@@ -297,17 +307,20 @@ growing cover, terminal illness benefit & rider option of two rider</p>
                 <p>&copy; Copyright 2023. All Rights Reserved</p>
             </div>
         </div>
-    </footer>
-
-
+    </footer> 
     
     
-    
-    <script src="assets/vendors/js/jquery.min.js"></script>    
+    <script src="assets/vendors/js/jquery.min.js"></script> 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>   
     <script src="js/script.js"></script>
     <script>
         
-
+        $( function() {
+	$( "#dob" ).datepicker({
+		dateFormat: "dd-mm-yy"
+		,	duration: "fast"
+	});
+} );
 
 
     </script>

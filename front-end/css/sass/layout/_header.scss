@@ -25,17 +25,17 @@ header{
                 @include pos-relative();
                 
                 &:first-child{    
-                    padding-right: 20px; 
-                    margin-right: 20px;            
+                    padding-right: 10px; 
+                    margin-right: 10px;            
                     &::after{
                         content: "";
-                        background: $black;
-                        width: 2px;
-                        height: 40px;
+                        background: $black-gray;
+                        width: 1px;
+                        height: 64px;
                         position: absolute;
                         right: 0;
                         top: 50%;
-                        margin-top: -20px;
+                        margin-top: -28px;
                     }
                 }
     
