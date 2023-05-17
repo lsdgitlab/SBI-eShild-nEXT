@@ -46,7 +46,8 @@
             ul{
                 @include unordered-list();
                 @include f-0();
-                margin-bottom: 10px;
+                // margin-bottom: 10px;
+                margin-bottom: 11px;
                 &:last-child{ margin-bottom: 0}
                 li{
                     @include di-block();
@@ -58,7 +59,7 @@
                     p{
                         color: $white;
                         line-height:1;                    
-                        &:first-child{ font-size: 20px; margin-bottom: 4px;}
+                        &:first-child{ font-size: 20px; font-weight: 600; margin-bottom: 4px;}
                         &:last-child{ font-size: 14px; }
     
                     }
@@ -66,11 +67,17 @@
             }
         }
         .middle{
+            background: transparent url('../img/why-choose-us.jpg') scroll no-repeat top center;
+            -webkit-background-size: cover;
+            background-size: cover;
+            height: 250px;
     
         }
         .bottom{
             background: $black-blue;
-            padding: 38px 30px;
+            // padding: 38px 30px;
+            padding: 30px 30px;
+            height: 160px;
             border-bottom-left-radius: 20px;
             p{ 
                 color: $white; font-size: 8px; text-align: center; line-height:14px; margin: 0 0 7px;
@@ -89,6 +96,7 @@
             background:$white;
             padding:40px 40px;
             border-top-right-radius: 20px;
+            height: 581px;
             p{
                 font-size: 26px;
                 line-height: 36px;
@@ -103,9 +111,11 @@
                 margin-top: 25px;
                 .form-group{
                     padding-right: 40px;                    
-                    margin-bottom: 34px;
+                    // margin-bottom: 34px;
+                    margin-bottom: 44px;
                     @include di-block();
-                    @include valign-middle();
+                    // @include valign-middle();
+                    @include valign-bottom();
                     width: 33%;
                     @include pos-relative();
                     &:nth-of-type(3n){
@@ -121,6 +131,7 @@
                         margin: 0 0 10px;
                     }
                     input, select{
+                        background: $white;
                         display: block;
                         color: $blue;
                         font-size: 14px;
@@ -207,7 +218,8 @@
         }
         .bottom-benefit{
             background: $skybluedark;
-            padding: 40px 40px;
+            // padding: 40px 40px;
+            padding: 39px 40px;
             border-bottom-right-radius: 20px;
             .bnft-list-sect{
                 @include f-0();                
@@ -228,7 +240,11 @@
                     @include unordered-list();
                     @include di-block();
                     @include valign-middle();
-                    padding-right: 40px;               
+                    // padding-right: 40px;   
+                    padding-right: 6.6%; 
+                    &:last-child {
+                        padding-right: 0;
+                    }
                     
                     li{
                         color: $blue;
@@ -265,7 +281,7 @@
 .card-sect{    
     background: $darkblue;
     padding: 40px 0 25px;    
-    p{
+    p.top-para{
         color: $white;
         font-size: 16px;
         line-height: 30px;
@@ -305,6 +321,12 @@
                 padding: 20px 28px;
                 border-bottom-left-radius: 20px;
                 border-bottom-right-radius: 20px;
+                // min-height: 165px;
+                min-height: 178px;
+                &.show{
+                    // min-height: 100%;
+                    transition: height 0.1s ease-in;
+                }
                 h3{
                     color: $darkblue;
                     font-size: 24px;
@@ -314,13 +336,18 @@
                 }
                 ul{
                     @include unordered-list();
+                    height: 56px;
+                    overflow: hidden;
                     li{
                         color: $darkblue;
                         font-size: 14px;
                         line-height: 20px;
                         padding-left: 14px;
-                        margin-bottom: 16px;
+                        margin-bottom: 14px;
                         @include pos-relative();
+                        // display: none;
+                        opacity: 0;
+                        &:first-child{display: block;opacity: 1;}
                         &::before{
                             content: "";
                             background: $pink;
@@ -332,8 +359,34 @@
                             height: 6px;
                             @include border-radius(25px);
                         }
+                        // &:last-child{
+                        //     margin-bottom: 0;
+                        // }
+                        &.show{ 
+                            // display: block; 
+                            opacity: 1;
+                            transition: opacity 1s ease-in;
+                            // @include transition();
+                        }
+                        
                     }
+                    &.show{
+                        height: 100%;
+                        overflow: visible;
+                        transition: height 0.1s ease-in;
+                        
+                    }
+                }                
+                .read-more, .read-less{
+                    color: $blue;
+                    font-weight: 600;
+                    // margin-top: 10px;
+                    text-transform: capitalize;
                 }
+                .read-more{
+                    display: block;
+                }
+                .read-less{ display: none;}
             }
         }
     }
@@ -363,7 +416,7 @@
         border-left: 2px solid $pink;         
         h2{
             color: $blue;
-            font-size: 32px;
+            font-size: 24px;
             font-weight: 600;
             line-height: 1;            
             padding: 0 40px;
@@ -393,6 +446,7 @@
             // height: calc(100% - 4px);
             height: 90%;
             overflow-y: auto;
+            scrollbar-width:thin;scroll-behavior:smooth;
             &::-webkit-scrollbar {
                 width: 3px;
             }             
@@ -414,7 +468,7 @@
             color: $blue;
             font-size: 24px;
             margin-top: 0;
-            margin-bottom: 28px;
+            margin-bottom: 20px;
             line-height: 1;
         }
         p{
@@ -426,6 +480,9 @@
             }
             &.m-0{
                 @include m-0();
+            }
+            &.list-ttl{
+                margin-bottom: 20px;
             }
         }
         .bullet{
@@ -439,7 +496,7 @@
             @include bullet();
         }
         .list{
-            margin-bottom: 28px;
+            margin-bottom: 22px;
             &:last-child {
                 margin-bottom: 0;
             }
@@ -465,6 +522,7 @@
             li{
                 @include pos-relative();
                 padding-left: 10px;
+                margin-bottom: 8px;
                 &::before{
                     content: "";
                     position: absolute;
