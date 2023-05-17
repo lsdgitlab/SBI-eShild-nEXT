@@ -355,6 +355,31 @@ submitBtn.addEventListener('click', (e) => {
   }
 })
 
-var lgs = 123
-// lgs = "Ls Digital";
-console.log(lgs)
+// var lgs = 123
+// // lgs = "Ls Digital";
+// console.log(lgs)
+
+const leftsideHe = document.querySelector('.leftside').clientHeight;
+const headerHe = document.querySelector('header').clientHeight;
+let topOffHeight = leftsideHe - headerHe
+let formHe = document.querySelector('.top-form-area').clientHeight
+console.log("Height===>",topOffHeight);
+$(window).scroll( function(){
+  if($(this).scrollTop()  >= topOffHeight && $(this).scrollTop()  <= formHe +30){
+    $('#submit').addClass('stick')
+  }else{
+    $('#submit').removeClass('stick')
+  }
+})
+
+// $(function() { // called when page is refreshed
+
+//   var scroll = $(window).scrollTop();
+
+//   if (scroll > 728) {
+//     $("#submit").addClass("scroll");
+//   } else {
+//     $("#submit").removeClass("scroll");
+//   }
+// });
+
