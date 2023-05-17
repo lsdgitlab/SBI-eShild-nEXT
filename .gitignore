@@ -1,5 +1,6 @@
 node_modules/
 dist/
 psds/
+front-end/15-05-23/
 /.idea
 .vscode/*
