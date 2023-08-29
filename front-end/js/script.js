@@ -196,7 +196,7 @@ const stateName = [
 ]
 
 for (var i = 0; i < stateName.length; i++) {
-  console.log(stateName[i].name)
+  // console.log(stateName[i].name)
   let optn = document.createElement('option')
   optn.value = stateName[i].name
   optn.innerHTML = stateName[i].name
@@ -290,9 +290,19 @@ submitBtn.addEventListener('click', (e) => {
   }
 })
 
-// var lgs = 123
-// // lgs = "Ls Digital";
-// console.log(lgs)
+
+
+const radioButtons = document.querySelectorAll('input[name="choice"]');
+function handleRadioClick() {
+  const shwBox = document.getElementById('choiceData');
+  document.getElementById('yes').checked ? shwBox.style.display = 'block' : shwBox.style.display = 'none';  
+}
+
+radioButtons.forEach(radio => {
+  radio.addEventListener('click', handleRadioClick);
+});
+
+
 
 const leftsideHe = document.querySelector('.leftside').clientHeight;
 const headerHe = document.querySelector('header').clientHeight;
