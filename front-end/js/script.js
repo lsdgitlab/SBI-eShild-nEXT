@@ -29,72 +29,7 @@ $(document).ready(function(){
         $(this).addClass('current');
         $('#'+tab_id).addClass('current');
     });
-
-$(document).ready(function () {
-    $('.hamburger').on('click', function () {
-      $(this).toggleClass('menu-opened')
-      $('.menu').toggleClass('menu-opened')
-    })
-  
-    $('.cards .content .read-more').click(function () {
-      $('.cards .content').addClass('show')
-      $('.cards .content ul').addClass('show')
-      $('.cards .content ul li').addClass('show')
-      $('.read-more').hide()
-      $('.read-less').show()
-    })
-    $('.cards .content .read-less').click(function () {
-      $('.cards .content').removeClass('show')
-      $('.cards .content ul').removeClass('show')
-      $('.cards .content ul li').removeClass('show')
-      $('.read-less').hide()
-      $('.read-more').show()
-    })
-  
-    $(document).on('click', '.tabs li', function () {
-      $('li').removeClass('active')
-      $('ul').toggleClass('expanded')
-      $(this).addClass('active')
-      var tab_id = $(this).attr('data-tab')
-      $('.tab-content').removeClass('current')
-      $(this).addClass('current')
-      $('#' + tab_id).addClass('current')
-    })
-
-    // $("#dob").datepicker({
-    // 	dateFormat: "dd-mm-yy"
-    // 	,	duration: "fast"
-    // });
-  })
-
-  $('.cards .content .read-more').click(function () {
-    $('.cards .content').addClass('show')
-    $('.cards .content ul').addClass('show')
-    $('.cards .content ul li').addClass('show')
-    $('.read-more').hide()
-    $('.read-less').show()
-  })
-  $('.cards .content .read-less').click(function () {
-    $('.cards .content').removeClass('show')
-    $('.cards .content ul').removeClass('show')
-    $('.cards .content ul li').removeClass('show')
-    $('.read-less').hide()
-    $('.read-more').show()
-  })
-
-  $(document).on('click', '.tabs li', function () {
-    $('li').removeClass('active')
-    $('ul').toggleClass('expanded')
-    $(this).addClass('active')
-    var tab_id = $(this).attr('data-tab')
-    $('.tab-content').removeClass('current')
-    $(this).addClass('current')
-    $('#' + tab_id).addClass('current')
-  })
-  // $("#dob").datepicker({
-  // 	dateFormat: "dd-mm-yy"
-  // 	,	duration: "fast"
-  // });
+ 
 })
 
 const submitBtn = document.getElementById('submit')
