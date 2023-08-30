@@ -84,23 +84,29 @@
                     <div class="form-area">
                         <form id="myForm">
                             <div class="form-group">
-                                <label>Full Name*</label>
-                                <input type="text" name="fullname" value="" id="fullname">
+                                <!-- <label>Full Name*</label> -->
+
+                                <input type="text" name="fname" value="" id="fname" placeholder="First Name*">
                             </div>
                             <div class="form-group">
-                                <label id="mblLabel">Mobile Number*</label>
-                                <input type="text" name="mobile" value="" id="mobile">
+                                <!-- <label>Full Name*</label> -->
+                                <input type="text" name="lname" value="" id="lname" placeholder="Last Name*">
                             </div>
                             <div class="form-group">
-                                <label>Email Address*</label>
-                                <input type="text" name="email" value="" id="email">
+                                <!-- <label id="mblLabel">Mobile Number*</label> -->
+                                <input type="number" max="10" name="mobile" value="" id="mobile" placeholder="Mobile Number">
+                                <!-- <span id="dispErr"></span> -->
                             </div>
                             <div class="form-group">
-                                <label>Date Of Birth*</label>
-                                <input type="text" name="dob" value="" id="dob">
+                                <!-- <label>Email Address*</label> --> 
+                                <input type="text" name="email" value="" id="email" placeholder="Email">
                             </div>
                             <div class="form-group">
-                                <label>Your Gender*</label>
+                                <!-- <label>Date Of Birth*</label> -->
+                                <input type="text" name="dob" value="" id="dob" placeholder="Date Of Birth*">
+                            </div>
+                            <div class="form-group">
+                                <!-- <label>Your Gender*</label> -->
                                 <select name="gender" id="gender">
                                     <option value="Select the Gender">Select the Gender</option>
                                     <option value="Male">Male</option>
@@ -109,33 +115,74 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Your Annual Income Look Like*</label>
+                                <!-- <label>Your Annual Income Look Like*</label> -->
                                 <select name="anualIncome" id="anualIncome">
+                                    <option value="Your Annual Income Look Like*">Your Annual Income Look Like*</option>
                                     <option value="0">5-10Lacs</option>
                                     <option value="1">10-15Lacs</option>
                                     <option value="2">15-20Lacs</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Are you or your spouse working / retired from State Bank Group *</label>
-                                <select name="working-option" id="workingOpt">
-                                    <option value="1">No</option>
-                                    <option value="0">Yes</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>State</label>
-                                <select id="state" name="state">
-                                    <option value="Select the State">Select the State</option>
-                                    
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Do you Smoke</label>
+                                <!-- <label>Do you Smoke</label> -->
                                 <select id="smoke" name="smoke">
+                                    <option value="Do you Smoke">Do you Smoke</option>
                                     <option value="1">No</option>
-                                    <option value="0">Yes</option>
+                                    <option value="2">Yes</option>
                                 </select>
+                            </div>
+                            <div class="form-group">
+                                <!-- <label>State</label> -->
+                                <select id="state" name="state">
+                                    <option value="Select the State">Select the State</option>                                    
+                                </select>
+                            </div>
+                            <div class="form-group wd100">
+                                <div class="switchbg">
+                                    <span>Are you or your spouse working / retired from State Bank Group *</span>
+                                <div class="togglebg">
+                                    <div class="switch">	
+                                        <!-- <input type="radio" name="choice" id="yes" onclick="showYes()"> -->
+                                        <input type="radio" name="choice" id="yes">
+                                        <label for="yes">Yes</label>
+                                        <input type="radio" name="choice" id="no" checked>
+                                        <!-- <input type="radio" name="choice" id="no"  onclick="showNo()"> -->
+                                        <label for="no">No</label>
+                                        <span class="switchFilter"></span>
+                                      </div>
+                                </div>
+                                </div>
+                                
+                            </div>
+                            <div class=" wd100 choiceField" id="choiceData" style="display:none ;">
+                                <div class="form-group">
+                                    <label>Spouse/ Self</label>
+                                    <div class="switchbg">
+                                    <div class="togglebg wd125">
+                                        <div class="switch">	
+                                            <!-- <input type="radio" name="choice" id="yes" onclick="showYes()"> -->
+                                            <input type="radio" name="choice1" id="self">
+                                            <label for="self">Self</label>
+                                            <input type="radio" name="choice1" id="spouse" checked>
+                                            <!-- <input type="radio" name="choice" id="no"  onclick="showNo()"> -->
+                                            <label for="spouse">Spouse</label>
+                                            <span class="switchFilter"></span>
+                                          </div>
+                                    </div>
+                                </div> 
+
+                            </div>
+                            <div class="form-group">
+                                <label>PF/ Pension Index/ Employee No.</label>
+                                <input type="text" name="penemployee" value="" id="penemployee" placeholder="">
+                                <span class="discountTxt">Appropriate discount will be applicable</span>
+                            </div>
+                            <div class="form-group">
+                                <label>Name Of Employer</label>
+                                <input type="text" name="nemployer" value="" id="nemployer" placeholder="">
+                            </div>
+                            
+
                             </div>
                             <div class="check labelcolor">
                                 <input type="checkbox" name="tandc" id="condition" class="checkbx">
@@ -321,8 +368,10 @@
         $( function() {
 	$( "#dob" ).datepicker({
 		dateFormat: "dd-mm-yy"
-		,	duration: "fast"
+		,	duration: "fast",
+        maxDate: new Date()
 	});
+    // $( "#datepicker" ).datepicker({  maxDate: 0 });
 } );
 
 

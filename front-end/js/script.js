@@ -33,7 +33,8 @@ $(document).ready(function(){
 })
 
 const submitBtn = document.getElementById('submit')
-const fullname = document.getElementById('fullname')
+const fname = document.getElementById('fname')
+const lname = document.getElementById('lname')
 const mobile = document.getElementById('mobile')
 const email = document.getElementById('email')
 const dob = document.getElementById('dob')
@@ -43,6 +44,8 @@ const workingOpt = document.getElementById('workingOpt')
 const state = document.getElementById('state')
 const smoke = document.getElementById('smoke')
 const condition = document.getElementById('condition')
+const penEmpl = document.getElementById('penemployee')
+const numEployer = document.getElementById('nemployer')
 
 // var formGrpDiv = document.querySelectorAll('.form-group')
 
@@ -194,9 +197,41 @@ const stateName = [
     name: 'West Bengal',
   },
 ]
+const mobile10digit = (()=>{
+  mobile.addEventListener('input', function(event) {
+    const errorText = document.getElementById('dispErr');
+    // const errorText = document.createElement('span')
+    let errorMessageDisplayed = false;
+    const inputText = event.target.value;
+    if (inputText.length > 10) {
+      event.target.value = inputText.slice(0, 10);
+      if (!errorMessageDisplayed) {   
+        // this.parentElement.appendChild(errorText)     
+        // errorText.textContent = 'Please enter only 10 digits.';
+        errorMessageDisplayed = true;
+      }
+    } else {
+      // errorText.textContent = '';
+      errorMessageDisplayed = false;
+      // this.parentElement.removeChild(errorText)
+    }
+  });
 
+
+
+
+
+})
+mobile10digit()
+
+
+// mobile.onkeydown = ( (e)=>{
+//   if(e.keycode === 13 && this.value.length === 10){
+//     e.preventDefault()
+//   }
+// })
 for (var i = 0; i < stateName.length; i++) {
-  console.log(stateName[i].name)
+  // console.log(stateName[i].name)
   let optn = document.createElement('option')
   optn.value = stateName[i].name
   optn.innerHTML = stateName[i].name
@@ -209,18 +244,36 @@ submitBtn.addEventListener('click', (e) => {
   var regexNum = /^[0-9]{10}$/
   var emailRegex =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-
-  if (fullname.value.length === 0 || !regexAlpha.test(fullname.value)) {
-    fullname.focus()
+    
+  if (fname.value.length === 0 || !regexAlpha.test(fname.value)) {
+    fname.focus()
     let loweCase = email.value
     loweCase.toLowerCase()
-    fullname.parentElement.classList.add('valerror')
-    fullname.style.borderColor = 'red'
+    fname.parentElement.classList.add('valerror')
+    fname.style.borderColor = 'red'
     console.log('Numbers not allow')
   } else {
-    fullname.parentElement.classList.remove('valerror')
-    fullname.style.borderColor = '#e5e5e5'
+    fname.parentElement.classList.remove('valerror')
+    fname.style.borderColor = '#e5e5e5'
   }
+
+  if (lname.value.length === 0 || !regexAlpha.test(lname.value)) {
+    let loweCase = email.value
+    loweCase.toLowerCase()
+    lname.parentElement.classList.add('valerror')
+    lname.style.borderColor = 'red'
+    console.log('Numbers not allow')
+  } else {
+    lname.parentElement.classList.remove('valerror')
+    lname.style.borderColor = '#e5e5e5'
+  }
+
+
+
+
+
+
+  
 
   if (
     mobile.value.length === 0 ||
@@ -228,6 +281,7 @@ submitBtn.addEventListener('click', (e) => {
     !regexNum.test(mobile.value)
   ) {
     // mobile.focus()
+    
     mobile.parentElement.classList.add('valerror')
     mobile.style.borderColor = 'red'
     console.log('Numbers not allow')
@@ -254,17 +308,17 @@ submitBtn.addEventListener('click', (e) => {
   }
 
   if (
-    fullname.value.length === 0 ||
+    fname.value.length === 0 ||
+    lname.value.length === 0 ||
     dob.value.length === 0 ||
     email.value.length === 0 ||
     mobile.value.length === 0 ||
     email.value.length === 0 ||
     regexAlpha.test(mobile.value) ||
     !regexNum.test(mobile.value) ||
-    gender.value == 0 ||
-    gender.value == 'Select the Gender' ||
-    state.value == 0 ||
-    state.value == 'Select the State'
+    gender.value == 0 || gender.value == 'Select the Gender' ||
+    state.value == 0 || state.value == 'Select the State' ||
+    anualIncome.value == 0 || anualIncome.value == 'Your Annual Income Look Like*'
   ) {
     condition.disabled = true
     condition.parentElement.classList.add('labelcolor')
@@ -288,11 +342,63 @@ submitBtn.addEventListener('click', (e) => {
     state.parentElement.classList.remove('valerror')
     state.style.borderColor = '#e5e5e5'
   }
+  if (anualIncome.value == 0 || anualIncome.value == 'Your Annual Income Look Like*') {
+    anualIncome.parentElement.classList.add('valerror')
+    anualIncome.style.borderColor = 'red'
+  } else {
+    anualIncome.parentElement.classList.remove('valerror')
+    anualIncome.style.borderColor = '#e5e5e5'
+  }
+  if (smoke.value == 0 || smoke.value == 'Do you Smoke') {
+    smoke.parentElement.classList.add('valerror')
+    smoke.style.borderColor = 'red'
+  } else {
+    smoke.parentElement.classList.remove('valerror')
+    smoke.style.borderColor = '#e5e5e5'
+  }
+  // handleRadioClick()
+  if (penEmpl.value.length === 0 || !regexAlpha.test(penEmpl.value)) { 
+    // mobile.focus()
+    penEmpl.parentElement.classList.add('valerror')
+    penEmpl.style.borderColor = 'red'
+  } else {
+    penEmpl.parentElement.classList.remove('valerror')
+    penEmpl.style.borderColor = '#e5e5e5'
+  }
+  if (numEployer.value.length === 0 || !regexAlpha.test(numEployer.value)) { 
+    // mobile.focus()
+    numEployer.parentElement.classList.add('valerror')
+    numEployer.style.borderColor = 'red'
+  } else {
+    numEployer.parentElement.classList.remove('valerror')
+    numEployer.style.borderColor = '#e5e5e5'
+  }
 })
 
-// var lgs = 123
-// // lgs = "Ls Digital";
-// console.log(lgs)
+
+
+
+const radioButtons = document.querySelectorAll('input[name="choice"]');
+function handleRadioClick() {
+  const shwBox = document.getElementById('choiceData');
+  if(document.getElementById('yes').checked){
+  shwBox.style.display = 'block';
+  
+}else{
+  shwBox.style.display = 'none';  
+}
+
+
+
+
+  // document.getElementById('yes').checked ? shwBox.style.display = 'block' : shwBox.style.display = 'none';  
+}
+
+radioButtons.forEach(radio => {
+  radio.addEventListener('click', handleRadioClick);
+});
+
+
 
 const leftsideHe = document.querySelector('.leftside').clientHeight;
 const headerHe = document.querySelector('header').clientHeight;

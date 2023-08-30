@@ -117,12 +117,22 @@
                 .form-area{
                     @include f-0();
                     margin-top: 25px;
-                    .form-group{
+                    .switchbg span{
+                        width: 100%;
+                    }
+                    .togglebg{
+                        height: 30px;margin-top:20px;
+                    }
+                    .form-group:nth-child(10):after{
+                        top: 2px;
+                    }
+                    .form-group, .choiceField .form-group:nth-child(2){
                         padding-right: 0;                    
-                        margin-bottom: 30px;
+                        margin-bottom: 20px;
                         display: block;
                         width: 100%;                        
                     }
+                    
                     .btn-submit{
                         font-size: $font-size-base;
                         font-weight: 100;
