@@ -114,7 +114,7 @@
     border-bottom-right-radius: 20px;
     .top-form-area {
       background: $white;
-      padding: 40px 40px;
+      padding: 20px 40px 0 40px;
       border-top-right-radius: 20px;
       height: 581px;
       p {
@@ -129,11 +129,11 @@
       }
       .form-area {
         @include f-0();
-        margin-top: 25px;
+        margin-top: 15px;
         .form-group {
           padding-right: 40px;
           // margin-bottom: 34px;
-          margin-bottom: 32px;
+          margin-bottom: 28px;
           @include di-block();
           // @include valign-middle();
           @include valign-bottom();
@@ -145,7 +145,7 @@
 
           label {
             display: block;
-            color: rgba(41, 31, 117, 0.8);
+            color:#291f75;
             font-size: 12px;
             line-height: 1;
             text-align: left;
@@ -156,7 +156,7 @@
             background: $white;
             display: block;
             color: $blue;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 600;
             width: 100%;
             border: none;
@@ -165,11 +165,12 @@
             text-transform: capitalize;
             outline: 0;
             @include pos-relative();
+            padding-left:25px;
           }
         }
 
         .check {
-          margin-top: -10px;
+          margin-top: 15px;
           .checkbx {
             padding: 0;
             height: initial;
@@ -177,6 +178,7 @@
             margin-bottom: 0;
             display: none;
             cursor: pointer;
+           
           }
           label {
             position: relative;
@@ -236,6 +238,12 @@
         .clear {
           clear: both;
         }
+        .form-group.wd100 {
+          width: 100%;
+          position: relative;
+          padding-bottom: 0;
+          margin-bottom: 15px;
+        }
         .togglebg {
                 display: inline-block;
                 padding: 1px;
@@ -246,14 +254,10 @@
                 height: 36px;
                 position: relative;
             }
-        .switchbg span{ display: inline-block;width: 40%;color: #291f75;
-            font-size: 14px;
+        .switchbg span{ display: inline-block;width: 37%;color: #291f75;padding-left: 38px;
+            font-size: 12px;
             font-weight: 600;}    
-        .form-group.switchbg {
-          width: 100%;
-          position: relative;
-          padding-bottom: 100px;
-        }
+        
         .switchFilter {
           width: 0;
           display: inline-block;
@@ -304,11 +308,6 @@
           width: 42px;
         display: inline-block;
         }
-        .switch input[type="radio"]#yes:checked ~ label[for="yes"] {
-          color: white;
-        //   border: 1px solid #2a1f75;
-          
-        }
         .switch input[type="radio"]#yes:checked ~ .switchFilter {
             left: 0;
             width: 55px;
@@ -316,9 +315,8 @@
             border-radius: 19px;
             // border-top-left-radius: 19px;
         }
-        .switch input[type="radio"]#no:checked ~ label[for="no"] {
+        .switch input[type="radio"]#no:checked ~ label[for="no"], .switch input[type="radio"]#yes:checked ~ label[for="yes"] {
           color: white;
-        //   border: 1px solid #2a1f75;
         }
         .switch input[type="radio"]#no:checked ~ .switchFilter {
           left: 56px;
@@ -327,72 +325,80 @@
             border-radius: 19px;
             // border-top-right-radius: 19px;
         }
-        .switchbg.choiceField{
-            height: 150px;
-            width: 100%;
-                background-color: rgb(0, 0, 0);
-                box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.06);
-              
+        
+        .switch input[type="radio"]#self:checked ~ label[for="yes"] {
+          color: white;
+        //   border: 1px solid #2a1f75;
+          
         }
-
-        // .toggle input[type="radio"]:checked + label {
-        //     background: #280971;
-        //     border-color: #280971;
-        //     font-size: 14px;
-        //     line-height: normal;
-        //     font-family: "Lato-Regular";
-        //     color: #FFFFFF;
-        //     padding: 10px 13px;
-        //     text-align: center;
-        // }
-        // .toggle input[type="radio"]:first-child:checked + label {
-        //     border-top-left-radius: 36px;
-        //     border-bottom-left-radius: 36px;
-        // }
-        // .toggle input[type="radio"]:checked + label {
-        //     background: #280971;
-        //     border-color: #280971;
-        //     font-size: 14px;
-        //     line-height: normal;
-        //     font-family: "Lato-Regular";
-        //     color: #FFFFFF;
-        //     padding: 10px 13px;
-        //     text-align: center;
-        // }
-        // .togglebg label {
-        //     display: inline-block;
-        //     padding: 6px 6px 5px 6px;
-        //     color: #666666;
-        //     line-height: normal;
-        //     text-align: center;
-        //     cursor: pointer;
-        // }
-        // .togglebg label:last-child {
-        //     border-top-right-radius: 36px;
-        //     border-bottom-right-radius: 36px;
-        //     border-top-left-radius: 0;
-        //     border-bottom-left-radius: 0;
-        //     border-left: 0;
-        //     border-radius: 36px;
-        // }
-        // .togglebg input[type="radio"] {
-        //     opacity: 0;
-        //     position: fixed;
-        //     width: 0;
-        // }
-        // .togglebg input[type="radio"] + label:last-child {
-        //     margin-left: -4px;
-        // }
-        // .togglebg [type="radio"]:checked + label, .togglebg [type="radio"]:not(:checked) + label {
-        //     color: #666666;
-        //     line-height: normal;
-        //     font-size: 14px;
-        //     padding: 10px 13px;
-        //     border-radius: 36px;
-        // }
-        // 
+        .switch input[type="radio"]#self:checked ~ .switchFilter {
+            left: 0;
+            width: 55px;
+            opacity: 1;
+            border-radius: 19px;
+            // border-top-left-radius: 19px;
+        }
+        .switch input[type="radio"]#spouse:checked ~ label[for="no"] {
+          color: white;
+        //   border: 1px solid #2a1f75;
+        }
+        .switch input[type="radio"]#spouse:checked ~ .switchFilter {
+          left: 56px;
+          width: 55px;
+            opacity: 1;
+            border-radius: 19px;
+            // border-top-right-radius: 19px;
+        }
+        .switch input[type="radio"]#spouse:checked ~ label[for="spouse"], .switch input[type="radio"]#self:checked ~ label[for="self"] {
+          color: white;
+        }
+        .togglebg.wd125{width: 125px;}
+        .switch input[type=radio]#spouse:checked~.switchFilter{width: 69px}
+        .choiceField{    padding: 20px 20px 0;
+          width: 100%;
+          // background-color: rgb(0, 0, 0);
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.06);           
       }
+      .choiceField .form-group{display: inline-block;vertical-align: top;margin-bottom: 15px;}
+      .choiceField .form-group input{border: 1px solid #efefef;     line-height: 26px;
+        padding: 0 0 0 10px;}
+      .choiceField .form-group:first-child{width: 25%;padding-right: 40px;}
+      .choiceField .form-group:nth-child(2){width: 40%;padding-right: 40px;}
+      .choiceField .discountTxt{color:#097590;
+            font-size: 12px;
+            line-height: 1;
+            text-align: left;
+            margin: 0 0 10px;
+      }
+      ::-webkit-input-placeholder { /* Edge */
+        color:#291f75;
+      }
+      
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #291f75;
+      }
+      
+      ::placeholder {
+        color: #291f75;
+      }     
+      .form-group:after{
+        width: 25px;height: 25px;content: "";position: absolute;
+        background: url("../img/icons_bg.jpg")0 0;    left: 0;
+        top: -8px
+      }
+      .form-group:nth-child(3):after{background-position:-112px 0;}
+      .form-group:nth-child(4):after{background-position:229px 0;}
+      .form-group:nth-child(5):after{background-position:63px 0;}
+      .form-group:nth-child(6):after{background-position:88px 0;}
+      .form-group:nth-child(7):after{background-position:118px 0;}
+      .form-group:nth-child(8):after{background-position:202px 0;}
+      .form-group:nth-child(9):after{background-position:33px 0;}
+      .form-group:nth-child(10):after{background-position:172px 25px;top: 11px;}
+      .choiceField .form-group::after{display: none;}
     }
+      
+    }
+   
     .bottom-benefit {
       background: $skybluedark;
       // padding: 40px 40px;
