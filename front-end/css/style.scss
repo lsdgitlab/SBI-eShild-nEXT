@@ -133,7 +133,7 @@
         .form-group {
           padding-right: 40px;
           // margin-bottom: 34px;
-          margin-bottom: 28px;
+          margin-bottom: 25px;
           @include di-block();
           // @include valign-middle();
           @include valign-bottom();
@@ -204,7 +204,7 @@
               @include valign-top();
               width: calc(100% - 45px);
               color: rgba(41, 31, 117, 0.54);
-              font-size: 12px;
+              font-size: 11px;
               text-align: left;
             }
           }
