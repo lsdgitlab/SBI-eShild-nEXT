@@ -36,7 +36,7 @@ const submitBtn = document.getElementById('submit')
 const fname = document.getElementById('fname')
 const lname = document.getElementById('lname')
 const mobile = document.getElementById('mobile')
-const email = document.getElementById('email')
+const email = document.getElementById('email');
 const dob = document.getElementById('dob')
 const gender = document.getElementById('gender')
 const anualIncome = document.getElementById('anualIncome')
@@ -216,14 +216,18 @@ const mobile10digit = (()=>{
       // this.parentElement.removeChild(errorText)
     }
   });
-
-
-
-
-
 })
 mobile10digit()
 
+// const numallow = 
+function isNumber(evt) {
+  evt = (evt) ? evt : window.event;
+  var charCode = (evt.which) ? evt.which : evt.keyCode;
+  if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      return false;
+  }
+  return true;
+}
 
 // mobile.onkeydown = ( (e)=>{
 //   if(e.keycode === 13 && this.value.length === 10){
@@ -269,12 +273,6 @@ submitBtn.addEventListener('click', (e) => {
   }
 
 
-
-
-
-
-  
-
   if (
     mobile.value.length === 0 ||
     regexAlpha.test(mobile.value) ||
@@ -284,16 +282,16 @@ submitBtn.addEventListener('click', (e) => {
     
     mobile.parentElement.classList.add('valerror')
     mobile.style.borderColor = 'red'
-    console.log('Numbers not allow')
+    // console.log('Numbers not allow')
   } else {
     mobile.parentElement.classList.remove('valerror')
     mobile.style.borderColor = '#e5e5e5'
   }
 
-  if (email.value.length === 0 || emailRegex.test(mobile.value)) {
+  if (emailRegex.test(email.value)) {
     email.parentElement.classList.add('valerror')
     email.style.borderColor = 'red'
-    console.log('Numbers not allow')
+    console.log('Email')
   } else {
     email.parentElement.classList.remove('valerror')
     email.style.borderColor = '#e5e5e5'
@@ -318,7 +316,7 @@ submitBtn.addEventListener('click', (e) => {
     !regexNum.test(mobile.value) ||
     gender.value == 0 || gender.value == 'Select the Gender' ||
     state.value == 0 || state.value == 'Select the State' ||
-    anualIncome.value == 0 || anualIncome.value == 'Your Annual Income Look Like*'
+    anualIncome.value == 0 || anualIncome.value == 'Your Annual Income*'
   ) {
     condition.disabled = true
     condition.parentElement.classList.add('labelcolor')
