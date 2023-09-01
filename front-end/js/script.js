@@ -271,9 +271,10 @@ $(document).ready(function () {
       validateDropdown(gender) &&
       validateDropdown(anualIncome) &&
       validateDropdown(smoke) &&
-      validateDropdown(state) &&
-      validateField(penEmpl, regexAlpha) &&
-      validateField(numEployer, regexAlpha)
+      validateDropdown(state)
+    // &&
+    // validateField(penEmpl, regexAlpha) &&
+    // validateField(numEployer, regexAlpha)
 
     condition.disabled = !isValid
     const tncMsg = document.getElementById('tnc-msg')
@@ -284,15 +285,15 @@ $(document).ready(function () {
       tncMsg.textContent = ''
     } else {
       condition.parentElement.classList.remove('labelcolor')
-      tncMsg.style.display = 'block'
-      tncMsg.textContent = 'Plesae Accept Term'
+      if (!condition.checked) {
+        // Only show the message if the condition is not already checked
+        tncMsg.style.display = 'block'
+        tncMsg.textContent = 'Please Accept Terms'
+      }
     }
-    // condition.change(() => {
-
-    // })
 
     condition.addEventListener('change', (event) => {
-      if (event.target.checked) {
+      if (event.target.checked && isValid) {
         tncMsg.style.display = 'none'
         // alert('sss')
       } else {
@@ -305,10 +306,23 @@ $(document).ready(function () {
   radioButtons.forEach(function (radio) {
     radio.addEventListener('click', function () {
       const shwBox = document.getElementById('choiceData')
-      shwBox.style.display = radio.id === 'yes' ? 'block' : 'none'
+      // shwBox.style.display = radio.id === 'yes' ? 'block' : 'none';
+
+      if (radio.id === 'yes') {
+        shwBox.style.display = 'block'
+        validateField(penEmpl, regexAlpha) &&
+          validateField(numEployer, regexAlpha)
+
+        // penemployee.style.display = 'block'
+        // nemployer.style.display = 'block'
+      } else {
+        shwBox.style.display = 'none'
+
+        // penemployee.style.display = 'none'
+        // nemployer.style.display = 'none'
+      }
     })
   })
-
   const leftsideHe = $('.leftside').height()
   const headerHe = $('header').height()
   const topOffHeight = leftsideHe - headerHe
