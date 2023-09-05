@@ -101,7 +101,9 @@
                 height: 100%;
                 border-bottom-left-radius: 0;
                 p{ 
-                    font-size: 9px;
+                    // font-size: 9px;
+                    font-size: 11px;
+                    line-height: 16px;
                 }
             }
         }    
@@ -205,6 +207,14 @@
             height: auto;
         }
     }//benefit-sect end
+
+    .desclaimer{
+        padding-top: 20px;
+        h3 {
+            margin: 20px 0 5px;
+          }
+
+    }//desclaimer end
 
 }
 

@@ -38,6 +38,7 @@ footer{
     }
     .footer-link{
         @include unordered-list();
+        text-align: right;
         li{
             @include di-block();
             @include valign-middle();
@@ -98,7 +99,9 @@ footer{
         }
 
         .footer-link{
+            text-align: center;
             li{
+
 
             }
 

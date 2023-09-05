@@ -338,3 +338,11 @@ $(document).ready(function () {
     }
   })
 })
+
+
+$(document).ready(function(){
+  $('.desclaimer').hide();
+  $('.desc-link').click(function(){
+    $('.desclaimer').show();
+  });
+});

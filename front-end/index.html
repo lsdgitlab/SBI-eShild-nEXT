@@ -31,7 +31,9 @@
                         <!-- <span></span> -->
                     </div>
                     <ul class="menu f-0">
-                        <li><a href="#ourplans" class="nav-link">Our Plans</a></li><li><a href="#benifits" class="nav-link">Benefits of Plan</a></li><li><a href="https://mockup.org.uk/sbi-life/landing-page/html/eWealth-Insurance_Brochure.pdf" target="_blank" class="btn-dwnld">Download Brochure</a></li>
+                        <!-- <li><a href="#ourplans" class="nav-link">Our Plans</a></li> -->
+                        <li><a href="#benifits" class="nav-link">Benefits of Plan</a></li>
+                        <li><a href="https://mockup.org.uk/sbi-life/landing-page/html/eWealth-Insurance_Brochure.pdf" target="_blank" class="btn-dwnld">Download Brochure</a></li>
                     </ul>
                     <!-- <ul class="right"><li><a href="javascript:void(0);" class="btn-dwnld">Download Brochure</a></li></ul> -->
                     
@@ -186,7 +188,7 @@
                             </div>
                             <div class="check labelcolor">
                                 <b id="tnc-msg" style="color: #f00;font-size: 10px;"></b>
-                                <input type="checkbox" name="tandc" id="condition" class="checkbx" disabled>
+                                <input type="checkbox" name="tandc" id="condition" class="checkbx" checked>
                                 <label for="condition"><span>I accept SBI Life's Privacy policy and by submitting my contact details here, I override my NCPR registration and authorise SBl Life and its authorised representatives to contact me and send information/communication relating to this proposal/or the resulting policy through SMS /Email /Phone /Letter /WhatsApp /any other electronic mode of communication to my registered email id/mobile number.</span></label>
                             </div>
                             <!-- <button id="submit" class="btn-submit" onclick="">Submit</button> -->
@@ -234,9 +236,12 @@
                     <div class="content">
                         <h3>Simplicity</h3>
                         <ul>
-                            <li>Death Benefit Payment Mode</li>
-                            <li>Better Half Benefit Option</li>
-                            <li>Options to customize the plan to meet your requirements</li>                            
+                            <!-- <li>Death Benefit Payment Mode</li>
+                            <li>Better Half Benefit Option</li> -->
+                            <li>Options to customize the plan to meet your requirements
+                                <ul><li>Death Benefit Payment Mode</li>
+                                    <li>Better Half Benefit Option</li></ul>
+                            </li>
                             <li>Terminal Illness Benefit available under all Plan options</li>
                             <li>Option to Pay premium - Only once or for limited period or entire policy term</li>
                             <li>Additional coverage through two Rider# options</li>
@@ -287,14 +292,14 @@
                         <p class="m-0">In case of death of Life assured during the policy term, we will pay the "<b>Sum Assured on Death</b>", which is :</p>
                         <p class="list-ttl"><span class="bullet"></span><b>For Regular and Limited Premium Policies: Higher of the following :</b></p>
                         <ul class="list alpha-list">
-                            <li>10 times the Annualised1 premium, or</li>
-                            <li>Absolute amount Assured+ to be paid on death, or</li>
-                            <li>105% of the total2 premiums received up to the  date of death</li>
+                            <li>10 times the Annualised<sup>1</sup> premium, or</li>
+                            <li>Absolute amount Assured<sup>+</sup> to be paid on death, or</li>
+                            <li>105% of the total<sup>2</sup> premiums received up to the  date of death</li>
                         </ul>
                         <p class="list-ttl"><span class="bullet"></span><b>For Single Premium Policies: Higher of the following :</b></p>
                         <ul class="list alpha-list">
                             <li>1.25 times of Single premium, or</li>
-                            <li>Absolute amount Assured+ to be paid on death</li>
+                            <li>Absolute amount Assured<sup>+</sup> to be paid on death</li>
                         </ul>
                     </div>
                     <div id="tab-2" class="tab-content">
@@ -302,10 +307,14 @@
                         <p class="m-0">The death benefit would be payable in one of the payment mode options as per below:</p>
                        <ul class="list unorderd-list">
                             <li>Lumpsum:  Death benefit will be payable in Lumpsum</li>
-                            <li>Monthly Installments: A specific percentage of Death Benefit will be payable for a period of 5 years. The payment of the monthly instalment will start from the policy monthiversary following the death of claim acceptance of the Life Assured.</li>
-                            <li>Lumpsum + Monthly Instalment: 50% of death benefit will be payable as lumpsum  and 50% of the death benefit will be payable as monthly instalment.</li>
-                            <li>The monthly instalment is a specific percentage of 50% of the death benefit will be payable every month for a period of 5 years</li>
-                            <li>The payment of the monthly instalment will start from the policy monthiversary following the death of claim acceptance of the Life Assured.</li>
+                            <li>Monthly Instalments: A specific percentage of Death Benefit will be payable for a period of 5 years. The payment of the monthly instalment will start from the policy monthiversary following the death of claim acceptance of the Life Assured.</li>
+                            <li>Lumpsum + Monthly Instalment: 50% of death benefit will be payable as lumpsum  and 50% of the death benefit will be payable as monthly instalment.
+                                <ul class="sublist">
+                                    <li>The monthly instalment is a specific percentage of 50% of the death benefit will be payable every month for a period of 5 years. The Specific percentage is 1.81%</li>
+                                    <li>The payment of the monthly instalment will start from the policy monthiversary following the death of claim acceptance of the Life Assured.</li>
+                                </ul>
+                            </li>
+                            
                         </ul>
                     </div>
                     <div id="tab-3" class="tab-content">
@@ -330,17 +339,93 @@
                     <div id="tab-6" class="tab-content">
                         <h2 class="benefit-title">Tax Benefit</h2>
                         <p>Tax benefits are as per Income Tax Laws & are subject to change from time to time. Please consult your Tax advisor for details.</p>
-                        <p><strong>Disclaimers:</strong></p>
+                        <!-- <p><strong>Disclaimers:</strong></p>
                         <p>1. Annualised premium shall be the premium amount payable in a year, chosen by the policy holder, excluding the applicable taxes, rider premiums, underwriting extra premiums and loadings for modal premiums, if any</p>
                         <p>2. Single Premium /  Total Premiums paid / received means total of all the premiums received, excluding any extra premium, any rider premiums and applicable taxes.</p>
                         <p>+Absolute amount Assured to be paid on death will depend on the plan option chosen by you at the policy inception and be as follows:</p>
                         <p>*Tax benefits are as per Income Tax Laws & are subject to change from time to time. Please consult your Tax advisor for details</p>
-                        <p>#The Riders Under this product are SBI Life – Accidental Death Benefit Rider (UIN: 111B015V03) and SBI Life – Accidental Total & Permanent Disability Benefit Rider (UIN: 111B016V03)</p>
+                        <p>#The Riders Under this product are SBI Life – Accidental Death Benefit Rider (UIN: 111B015V03) and SBI Life – Accidental Total & Permanent Disability Benefit Rider (UIN: 111B016V03)</p> -->
                     </div>
                 </div>
                 
             </div>
         </div>
+    </section>
+
+    <section class="desclaimer" id="desclaimer">
+        <div class="container">
+            <p>All values are rounded up to nearest integer Below premiums include Online Discount Whole Life Option available, Eligibility criteria: Minimum age at entry -45 years & above </p>
+            <h3>Per Month (Women)</h3>
+            <ul class="desc-list number-list">
+                <li>Monthly premium of Rs. 330/ Monthly is for Level Cover Premium excluding applicable taxes for a 22 years’ non-smoker healthy Women and policy term of 20 years with in-built Accelerated Terminal illness benefit for INR 50Lac. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs. 600/ Monthly is for Level Cover Premium excluding applicable taxes for a 22 years’ non-smoker healthy Women and policy term of 20 years with in-built Accelerated Terminal illness benefit for INR 1Cr. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs. 1199/ Monthly is for Level Cover Premium excluding applicable taxes for a 22 years’ non-smoker healthy women and policy term of 20 years with in-built Accelerated Terminal illness benefit for INR 2Cr. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs. 365/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 418/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 365/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 25 years’ non-smoker healthy women and policy term of 30 years with in-built Accelerated Terminal illness benefit for INR 50 Lacs. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs. 665/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 761/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 665/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 25 years’ non-smoker healthy women and policy term of 30 years with in-built Accelerated Terminal illness benefit for INR 1Cr. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs. 1329/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 1521/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 1329/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 25 years’ non-smoker healthy women and policy term of 30 years with in-built Accelerated Terminal illness benefit for INR 2Cr. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs. 387/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 424/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 387/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 30 years’ non-smoker healthy women and policy term of 20 years with in-built Accelerated Terminal illness benefit for INR 50 Lacs. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs. 704/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 772/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 704/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 30 years’ non-smoker healthy women and policy term of 20 years with in-built Accelerated Terminal illness benefit for INR 1Cr. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs. 1407/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 1543/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 1407/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 30 years’ non-smoker healthy women and policy term of 20 years with in-built Accelerated Terminal illness benefit for INR 2Cr. Base Life Cover without any rider option being availed</li>
+            </ul>
+            <h3>Per Month (Male)</h3>
+            <ul class="desc-list number-list">
+                <li>Monthly premium of Rs. 1245/ Monthly is for Level Cover Premium excluding applicable taxes for a 22 years’ non-smoker healthy male and policy term of 20 years with in-built Accelerated Terminal illness benefit for INR 2Cr. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs. 623/- monthly is for Level Cover Premium excluding applicable taxes for a 22 years’ non-smoker healthy male and policy term of 20 years with in-built Accelerated Terminal illness benefit for INR 1Cr. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs. 635/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs.669/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 635/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 25 years’ non-smoker healthy male and policy term of 15 years with in-built Accelerated Terminal illness benefit for INR 1Cr. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs. 803/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 892/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 803/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 30 years’ non-smoker healthy male and policy term of 20 years with in-built Accelerated Terminal illness benefit for INR 1Cr. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs. 1106/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 1255/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 1106/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 35 years’ non-smoker healthy male and policy term of 20 years with in-built Accelerated Terminal illness benefit for INR 1Cr. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs.1386/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 1513/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 1386/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 40 years’ non-smoker healthy male and policy term of 15 years with in-built Accelerated Terminal illness benefit for INR 1Cr. Base Life Cover without any rider option being availed</li>                
+                <li>Monthly premium of Rs. 4278/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 4690/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 4278/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 45 years’ non-smoker healthy male and policy term of 15 years with in-built Accelerated Terminal illness benefit for INR 2Cr. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs. 365/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 418/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 365/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 22 years’ non-smoker healthy male and policy term of 30 years with in-built Accelerated Terminal illness benefit for INR 50 Lacs. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs. 662/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 776/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 662- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 35 years’ non-smoker healthy male and policy term of 25 years with in-built Accelerated Terminal illness benefit for INR 50 Lacs. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs. 745/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 912/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 745/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 35 years’ non-smoker healthy male and policy term of 30 years with in-built Accelerated Terminal illness benefit for INR 50 Lacs. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs. 1226/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 1572/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 1226/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 40 years’ non-smoker healthy male and policy term of 35 years with in-built Accelerated Terminal illness benefit for INR 50 Lacs. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs. 449/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 561/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 449/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 22 years’ non-smoker healthy male and policy term of 40 years with in-built Accelerated Terminal illness benefit for INR 50 Lacs. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs. 3512/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 4151/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 3512/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 40 years’ non-smoker healthy male and policy term of 25 years with in-built Accelerated Terminal illness benefit for INR 2Cr. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs. 2407/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 2823/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 2407/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 35 years’ non-smoker healthy male and policy term of 25 years with in-built Accelerated Terminal illness benefit for INR 2Cr. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs. 1727/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 2059/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 1727/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 28 years’ non-smoker healthy male and policy term of 30 years with in-built Accelerated Terminal illness benefit for INR 2Cr. Base Life Cover without any rider option being availed</li>
+                <li>Monthly premium of Rs. 5239/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 6187/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 5239/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 45 years’ non-smoker healthy male and policy term of 25 years with in-built Accelerated Terminal illness benefit for INR 2Cr. Base Life Cover without any rider option being availed </li>                
+            </ul>
+            <h3>Yearly Premium (Male)</h3>
+            <ul class="desc-list number-list">
+                <li>Yearly premium of Rs. 14642/ year is for Level Cover Premium excluding applicable taxes for a 22 years’ non-smoker healthy male and policy term of 20 years with in-built Accelerated Terminal illness benefit for INR 2Cr. Base Life Cover without any rider option being availed</li>
+                <li>Yearly premium of Rs. 7321/ year is for Level Cover Premium excluding applicable taxes for a 22 years’ non-smoker healthy male and policy term of 20 years with in-built Accelerated Terminal illness benefit for INR 1Cr. Base Life Cover without any rider option being availed</li>
+                <li>Yearly premium of Rs. 7468/- is for Level Cover Premium excluding applicable taxes & yearly premium of Rs. 7860/- is for Increasing Cover Premium excluding applicable taxes & yearly premium of Rs. 7468/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 25 years’ non-smoker healthy male and policy term of 15 years with in-built Accelerated Terminal illness benefit for INR 1Cr. Base Life Cover without any rider option being availed</li>
+                <li>Yearly premium of Rs. 9442/- is for Level Cover Premium excluding applicable taxes & yearly premium of Rs. 10486/- is for Increasing Cover Premium excluding applicable taxes & yearly premium of Rs. 9442/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 30 years’ non-smoker healthy male and policy term of 20 years with in-built Accelerated Terminal illness benefit for INR 1Cr. Base Life Cover without any rider option being availed</li>
+                <li>Yearly premium of Rs.13005/- is for Level Cover Premium excluding applicable taxes & yearly premium of Rs. 14757/- is for Increasing Cover Premium excluding applicable taxes & yearly premium of Rs. 13005/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 35 years’ non-smoker healthy male and policy term of 20 years with in-built Accelerated Terminal illness benefit for INR 1Cr. Base Life Cover without any rider option being availed</li>
+                <li>Yearly premium of Rs.16300/- is for Level Cover Premium excluding applicable taxes & Yearly premium of Rs. 17795/- is for Increasing Cover Premium excluding applicable taxes & Yearly premium of Rs. 16300/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 40 years’ non-smoker healthy male and policy term of 15 years with in-built Accelerated Terminal illness benefit for INR 1Cr. Base Life Cover without any rider option being availed </li>
+                <li>Yearly premium of Rs. 50318/- is for Level Cover Premium excluding applicable taxes & Yearly premium of Rs. 55166/- is for Increasing Cover Premium excluding applicable taxes & Yearly premium of Rs. 50318/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 45 years’ non-smoker healthy male and policy term of 15 years with in-built Accelerated Terminal illness benefit for INR 2Cr. Base Life Cover without any rider option being availed</li>
+                <li>Yearly premium of Rs. 4293/- is for Level Cover Premium excluding applicable taxes & yearly premium of Rs. 4916/- is for Increasing Cover Premium excluding applicable taxes & yearly premium of Rs. 4293/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 22 years’ non-smoker healthy male and policy term of 30 years with in-built Accelerated Terminal illness benefit for INR 50 Lacs. Base Life Cover without any rider option being availed</li>
+                <li>Yearly premium of Rs. 5401/- is for Level Cover Premium excluding applicable taxes & yearly premium of Rs. 6599/- is for Increasing Cover Premium excluding applicable taxes & yearly premium of Rs. 5401/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 25 years’ non-smoker healthy male and policy term of 35 years with in-built Accelerated Terminal illness benefit for INR 50 Lacs. Base Life Cover without any rider option being availed</li>
+                <li>Yearly premium of Rs. 8760/- is for Level Cover Premium excluding applicable taxes & Yearly premium of Rs. 10725/- is for Increasing Cover Premium excluding applicable taxes & Yearly premium of Rs. 8760/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 35 years’ non-smoker healthy male and policy term of 30 years with in-built Accelerated Terminal illness benefit for INR 50 Lacs. Base Life Cover without any rider option being availed</li>
+                <li>Yearly premium of Rs. 14423/- is for Level Cover Premium excluding applicable taxes & Yearly premium of Rs. 18489/- is for Increasing Cover Premium excluding applicable taxes & Yearly premium of Rs. 14423/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 40 years’ non-smoker healthy male and policy term of 35 years with in-built Accelerated Terminal illness benefit for INR 50 Lacs. Base Life Cover without any rider option being availed</li>
+                <li>Yearly premium of Rs. 5281/- is for Level Cover Premium excluding applicable taxes & yearly premium of Rs. 6597/- is for Increasing Cover Premium excluding applicable taxes & yearly premium of Rs. 5281/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 22 years’ non-smoker healthy male and policy term of 40 years with in-built Accelerated Terminal illness benefit for INR 50 Lacs. Base Life Cover without any rider option being availed </li>
+                <li>Yearly premium of Rs. 41317/- is for Level Cover Premium excluding applicable taxes & yearly premium of Rs. 48831/- is for Increasing Cover Premium excluding applicable taxes & yearly premium of Rs. 41317/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 40 years’ non-smoker healthy male and policy term of 25 years with in-built Accelerated Terminal illness benefit for INR 2Cr. Base Life Cover without any rider option being availed</li>
+                <li>Yearly premium of Rs. 28313/- is for Level Cover Premium excluding applicable taxes & yearly premium of Rs. 33201/- is for Increasing Cover Premium excluding applicable taxes & yearly premium of Rs. 28313/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 35 years’ non-smoker healthy male and policy term of 25 years with in-built Accelerated Terminal illness benefit for INR 2Cr. Base Life Cover without any rider option being availed</li>
+                <li>Yearly premium of Rs. 20317/- is for Level Cover Premium excluding applicable taxes & yearly premium of Rs. 24214/- is for Increasing Cover Premium excluding applicable taxes & yearly premium of Rs. 20317/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 28 years’ non-smoker healthy male and policy term of 30 years with in-built Accelerated Terminal illness benefit for INR 2Cr. Base Life Cover without any rider option being availed</li>
+                <li>Yearly premium of Rs. 61632/- is for Level Cover Premium excluding applicable taxes & Yearly premium of Rs. 72778/- is for Increasing Cover Premium excluding applicable taxes & Yearly premium of Rs. 61632/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 45 years’ non-smoker healthy male and policy term of 25 years with in-built Accelerated Terminal illness benefit for INR 2Cr. Base Life Cover without any rider option being availed </li>                
+            </ul>
+            <h3>Per Day (Male)</h3>
+            <ul class="desc-list number-list">
+                <li>Per Day premium of Rs. 41/ Per day is for Level Cover Premium excluding applicable taxes for a 22 years’ non-smoker healthy male and policy term of 20 years with in-built Accelerated Terminal illness benefit for INR 2Cr. Base Life Cover without any rider option being availed</li>
+                <li>Per day premium of Rs. 21/day is for Level Cover Premium excluding applicable taxes for a 22 years’ non-smoker healthy male and policy term of 20 years with in-built Accelerated Terminal illness benefit for INR 1Cr. Base Life Cover without any rider option being availed</li>
+                <li>Per day premium of Rs. 21/- is for Level Cover Premium excluding applicable taxes & Per day premium of Rs. 22/- is for Increasing Cover Premium excluding applicable taxes & Per day premium of Rs. 20/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 25 years’ non-smoker healthy male and policy term of 15 years with in-built Accelerated Terminal illness benefit for INR 1Cr. Base Life Cover without any rider option being availed</li>
+                <li>Per day premium of Rs. 26/- is for Level Cover Premium excluding applicable taxes & Per day premium of Rs. 29/- is for Increasing Cover Premium excluding applicable taxes & Per day premium of Rs. 26/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 30 years’ non-smoker healthy male and policy term of 20 years with in-built Accelerated Terminal illness benefit for INR 1Cr. Base Life Cover without any rider option being availed</li>
+                <li>Per day premium of Rs. 36/- is for Level Cover Premium excluding applicable taxes & Per day premium of Rs. 41/- is for Increasing Cover Premium excluding applicable taxes & Per day premium of Rs. 36/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 35 years’ non-smoker healthy male and policy term of 20 years with in-built Accelerated Terminal illness benefit for INR 1Cr. Base Life Cover without any rider option being availed</li>
+                <li>Per Day premium of Rs. 45/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 49/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 44/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 40 years’ non-smoker healthy male and policy term of 15 years with in-built Accelerated Terminal illness benefit for INR 1Cr. Base Life Cover without any rider option being availed</li>
+                <li>Per Day premium of Rs. 138/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 152/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 138/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 45 years’ non-smoker healthy male and policy term of 15 years with in-built Accelerated Terminal illness benefit for INR 2Cr. Base Life Cover without any rider option being availed</li>
+                <li>Per day premium of Rs. 12/- is for Level Cover Premium excluding applicable taxes & Per day premium of Rs. 14/- is for Increasing Cover Premium excluding applicable taxes & Per day premium of Rs. 12/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 22 years’ non-smoker healthy male and policy term of 30 years with in-built Accelerated Terminal illness benefit for INR 50 Lacs. Base Life Cover without any rider option being availed</li>
+                <li>Per day premium of Rs. 15/- is for Level Cover Premium excluding applicable taxes & Per day premium of Rs. 19/- is for Increasing Cover Premium excluding applicable taxes & Per day premium of Rs. 15/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 24 years’ non-smoker healthy male and policy term of 35 years with in-built Accelerated Terminal illness benefit for INR 50 Lacs. Base Life Cover without any rider option being availed</li>
+                <li>Per Day premium of Rs. 24/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 30/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 24/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 35 years’ non-smoker healthy male and policy term of 30 years with in-built Accelerated Terminal illness benefit for INR 50 Lacs. Base Life Cover without any rider option being availed </li>
+                <li>Per Day premium of Rs.40/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 51/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 39/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 40 years’ non-smoker healthy male and policy term of 35 years with in-built Accelerated Terminal illness benefit for INR 50 Lacs. Base Life Cover without any rider option being availed</li>
+                <li>Per day premium of Rs. 15/- is for Level Cover Premium excluding applicable taxes & Per day premium of Rs. 19/- is for Increasing Cover Premium excluding applicable taxes & Per day premium of Rs. 14/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 22 years’ non-smoker healthy male and policy term of 40 years with in-built Accelerated Terminal illness benefit for INR 50 Lacs. Base Life Cover without any rider option being availed</li>
+                <li>Per day premium of Rs. 114/- is for Level Cover Premium excluding applicable taxes & Per day premium of Rs. 134/- is for Increasing Cover Premium excluding applicable taxes & Per day premium of Rs. 113/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 40 years’ non-smoker healthy male and policy term of 25 years with in-built Accelerated Terminal illness benefit for INR 2Cr. Base Life Cover without any rider option being availed</li>
+                <li>Per day premium of Rs. 78/- is for Level Cover Premium excluding applicable taxes & Per day premium of Rs. 91/- is for Increasing Cover Premium excluding applicable taxes & Per day premium of Rs. 77/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 35 years’ non-smoker healthy male and policy term of 25 years with in-built Accelerated Terminal illness benefit for INR 2Cr. Base Life Cover without any rider option being availed</li>
+                <li>Per day premium of Rs. 56/- is for Level Cover Premium excluding applicable taxes & Per day premium of Rs. 67/- is for Increasing Cover Premium excluding applicable taxes & Per day premium of Rs. 56/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 28 years’ non-smoker healthy male and policy term of 30 years with in-built Accelerated Terminal illness benefit for INR 2Cr. Base Life Cover without any rider option being availed</li>
+                <li>Per Day premium of Rs. 169/- is for Level Cover Premium excluding applicable taxes & Monthly premium of Rs. 200/- is for Increasing Cover Premium excluding applicable taxes & Monthly premium of Rs. 169/- is for Level cover with future proofing benefits Premium excluding applicable taxes for a 45 years’ non-smoker healthy male and policy term of 25 years with in-built Accelerated Terminal illness benefit for INR 2Cr. Base Life Cover without any rider option being availed </li>
+            </ul>
+        </div>
+        
     </section>
 
     <footer>
@@ -349,12 +434,12 @@
                 <p>ARN : 2N/Cr1/02/23/WEB/ENG</p>
             </div>
             <div class="di-block vis-desk">
-                <p>&copy; Copyright 2023. All Rights Reserved</p>
+                <!-- <p>&copy; Copyright 2023. All Rights Reserved</p> -->
             </div>
             <div class="di-block">
                 <ul class="footer-link">
-                    <li><a href="javascript:void();">Privacy Policy</a></li>
-                    <li><a href="javascript:void();">Disclaimer</a></li>
+                    <li><a href="https://www.sbilife.co.in/en/privacy-policy" target="_blank">Privacy Policy</a></li>
+                    <li><a href="#desclaimer" class="desc-link">Disclaimer</a></li>
                 </ul>
             </div>
             <div class="di-block vis-mob">

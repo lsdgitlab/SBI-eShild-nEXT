@@ -92,12 +92,13 @@
     .bottom {
       background: $black-blue;
       // padding: 38px 30px;
-      padding: 30px 30px;
+      padding: 30px 18px;
       height: 160px;
       border-bottom-left-radius: 20px;
       p {
         color: $white;
-        font-size: 8px;
+        // font-size: 8px;
+        font-size: 10px;
         text-align: center;
         line-height: 14px;
         margin: 0 0 7px;
@@ -519,7 +520,8 @@
         }
         ul {
           @include unordered-list();
-          height: 56px;
+          // height: 56px;
+          height: 60px;
           overflow: hidden;
           li {
             color: $darkblue;
@@ -554,11 +556,21 @@
               transition: opacity 1s ease-in;
               // @include transition();
             }
+            ul{
+              margin-top: 5px;
+              display: none;
+              li{
+                margin-bottom: 3px;
+              }
+            }
           }
           &.show {
             height: 100%;
             overflow: visible;
             transition: height 0.1s ease-in;
+            ul{
+              display: block;
+            }
           }
         }
         .read-more,
@@ -666,6 +678,7 @@
       }
       &.m-0 {
         @include m-0();
+        margin-bottom: 20px;
       }
       &.list-ttl {
         margin-bottom: 20px;
@@ -689,6 +702,9 @@
       li {
         font-size: 16px;
         line-height: 22px;
+        sup {
+          font-size: 10px;
+        }
       }
     }
     .alpha-list {
@@ -715,10 +731,52 @@
           margin-top: 10px;
           @include bullet();
         }
+        .sublist{
+          margin-top: 5px;
+          li{
+            font-size: 14px;
+            line-height: 20px;
+            &::before{
+              width: 4px;
+              height: 2px;
+            }
+          }
+        }
       }
     }
   }
 } //benefit-sect end
+
+.desclaimer{
+  padding: 20px 0;
+  h3 {
+    margin: 30px 0 5px;
+  }
+  p{
+    color: #000;
+    font-family: inherit;
+    font-weight: normal;
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .desc-list {
+    list-style: decimal inside;
+    li {
+      color: #000;
+      font-family: inherit;
+      font-weight: normal;
+      text-align: left;
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 22px;
+      position: relative;
+    }
+  }
+
+} //desclaimer end
+
 
 .top-section .rightside .top-form-area .form-area .form-group.valerror label {
   color: #f00;
