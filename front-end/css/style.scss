@@ -505,6 +505,7 @@
         border-bottom-right-radius: 20px;
         // min-height: 165px;
         min-height: 178px;
+        b{font-weight: bold;color: #d81c52;}
         &.show {
           // min-height: 100%;
           transition: height 0.1s ease-in;
@@ -872,6 +873,8 @@ select.ui-datepicker-year {
   padding: 4px;
   height: auto;
 }
-
+.ui-state-disabled{
+  color: #eee
+}
 
 @import "sass/media";
