@@ -31,7 +31,7 @@ $(document).ready(function(){
     });
  
 })
-
+const myForm = document.getElementById('myForm')
 const submitBtn = document.getElementById('submit')
 const fname = document.getElementById('fname')
 const lname = document.getElementById('lname')
@@ -242,6 +242,8 @@ for (var i = 0; i < stateName.length; i++) {
   state.appendChild(optn)
 }
 
+
+
 submitBtn.addEventListener('click', (e) => {
   e.preventDefault()
   var regexAlpha = /^[a-zA-Z ]*$/
@@ -272,11 +274,10 @@ submitBtn.addEventListener('click', (e) => {
     lname.style.borderColor = '#e5e5e5'
   }
 
-
-  if (
-    mobile.value.length === 0 ||
-    regexAlpha.test(mobile.value) ||
-    !regexNum.test(mobile.value)
+  if (mobile.value.length === 0 
+    || !isNumber(mobile)
+     || regexAlpha.test(mobile.value)
+    //  || !regexNum.test(mobile.value)
   ) {
     // mobile.focus()
     
@@ -288,7 +289,7 @@ submitBtn.addEventListener('click', (e) => {
     mobile.style.borderColor = '#e5e5e5'
   }
 
-  if (emailRegex.test(email.value)) {
+  if (mobile.value.length === 0 || emailRegex.test(email.value)) {
     email.parentElement.classList.add('valerror')
     email.style.borderColor = 'red'
     console.log('Email')
@@ -396,8 +397,6 @@ radioButtons.forEach(radio => {
   radio.addEventListener('click', handleRadioClick);
 });
 
-
-
 const leftsideHe = document.querySelector('.leftside').clientHeight;
 const headerHe = document.querySelector('header').clientHeight;
 let topOffHeight = leftsideHe - headerHe
@@ -412,7 +411,6 @@ $(window).scroll( function(){
 })
 
 // $(function() { // called when page is refreshed
-
 //   var scroll = $(window).scrollTop();
 
 //   if (scroll > 728) {
