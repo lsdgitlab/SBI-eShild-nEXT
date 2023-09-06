@@ -197,6 +197,17 @@ $(document).ready(function () {
     optn.innerHTML = stateObj.name
     state.appendChild(optn)
   })
+  const tncMsg = document.getElementById('tnc-msg')
+  condition.addEventListener('change', (event) => {
+    if (event.target.checked) {
+      tncMsg.style.display = 'none'
+      tncMsg.textContent = ''
+      // alert('sss')
+    } else {
+      tncMsg.style.display = 'block';
+      tncMsg.textContent = 'Please Accept Terms'
+    }
+  })
 
   const submitBtn = document.getElementById('submit')
   submitBtn.addEventListener('click', function (e) {
@@ -261,8 +272,24 @@ $(document).ready(function () {
         return true
       }
     }
+   
+    // if (!isValid) {
+    //   condition.parentElement.classList.add('labelcolor')
+    //   // condition.parentElement.appendChild(creteElement)
+    //   tncMsg.style.display = 'none'
+    //   tncMsg.textContent = ''
+    // } else {
+    //   condition.parentElement.classList.remove('labelcolor')
+    //   if (!condition.checked) {
+    //     // Only show the message if the condition is not already checked
+    //     tncMsg.style.display = 'block'
+    //     tncMsg.textContent = 'Please Accept Terms'
+    //   }
+    // }
+
 
     const isValid =
+    // condition.disabled = !isValid
       validateField(fname, regexAlpha) &&
       validateField(lname, regexAlpha) &&
       validateField(mobile, regexNum) &&
@@ -276,30 +303,7 @@ $(document).ready(function () {
     // validateField(penEmpl, regexAlpha) &&
     // validateField(numEployer, regexAlpha)
 
-    condition.disabled = !isValid
-    const tncMsg = document.getElementById('tnc-msg')
-    if (!isValid) {
-      condition.parentElement.classList.add('labelcolor')
-      // condition.parentElement.appendChild(creteElement)
-      tncMsg.style.display = 'none'
-      tncMsg.textContent = ''
-    } else {
-      condition.parentElement.classList.remove('labelcolor')
-      if (!condition.checked) {
-        // Only show the message if the condition is not already checked
-        tncMsg.style.display = 'block'
-        tncMsg.textContent = 'Please Accept Terms'
-      }
-    }
-
-    condition.addEventListener('change', (event) => {
-      if (event.target.checked && isValid) {
-        tncMsg.style.display = 'none'
-        // alert('sss')
-      } else {
-        tncMsg.style.display = 'block'
-      }
-    })
+    
   })
 
   const radioButtons = document.querySelectorAll('input[name="choice"]')
