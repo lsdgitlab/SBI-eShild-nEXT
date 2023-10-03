@@ -12,7 +12,20 @@ header{
     -o-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);  
-    z-index: 11;  
+    z-index: 11;
+    .btn-dwnld{
+        color: $blue;
+        border: 2px solid $blue;
+        padding: 5px 5px;
+        width: 160px;
+        height: 40px;
+        @include border-box();
+        text-transform: capitalize;
+        text-align: center;
+        @include di-block();
+        @include valign-middle();
+
+    }  
     .di-block{
         @include valign-middle();
 
@@ -68,19 +81,19 @@ header{
                         display: block;
                         padding: 5px;
                     }
-                    .btn-dwnld{
-                        color: $blue;
-                        border: 2px solid $blue;
-                        padding: 5px 5px;
-                        width: 160px;
-                        height: 40px;
-                        @include border-box();
-                        text-transform: capitalize;
-                        text-align: center;
-                        @include di-block();
-                        @include valign-middle();
+                    // .btn-dwnld{
+                    //     color: $blue;
+                    //     border: 2px solid $blue;
+                    //     padding: 5px 5px;
+                    //     width: 160px;
+                    //     height: 40px;
+                    //     @include border-box();
+                    //     text-transform: capitalize;
+                    //     text-align: center;
+                    //     @include di-block();
+                    //     @include valign-middle();
         
-                    }
+                    // }
                 }
             }
             ul.right{

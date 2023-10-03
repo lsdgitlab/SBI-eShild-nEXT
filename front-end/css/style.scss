@@ -934,5 +934,10 @@ select.ui-datepicker-year {
 .ui-state-disabled{
   color: #eee
 }
+.ruleinfo{position: absolute;left: 0;    top: 23px;
+  font-size: 10px;
+  color: #aaa;
+    font-family: Arial;
+    font-weight: normal;}
 
 @import "sass/media";
