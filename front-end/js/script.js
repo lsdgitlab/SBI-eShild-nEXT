@@ -197,17 +197,18 @@ $(document).ready(function () {
     optn.innerHTML = stateObj.name
     state.appendChild(optn)
   })
-  const tncMsg = document.getElementById('tnc-msg')
-  condition.addEventListener('change', (event) => {
-    if (event.target.checked) {
-      tncMsg.style.display = 'none'
-      tncMsg.textContent = ''
-      // alert('sss')
-    } else {
-      tncMsg.style.display = 'block';
-      tncMsg.textContent = 'Please Accept Terms'
-    }
-  })
+  // const tncMsg = document.getElementById('tnc-msg')
+
+  // condition.addEventListener('change', (event) => {
+  //   if (event.target.checked) {
+  //     tncMsg.style.display = 'none'
+  //     tncMsg.textContent = ''
+  //     // alert('sss')
+  //   } else {
+  //     tncMsg.style.display = 'block';
+  //     tncMsg.textContent = 'Please Accept Terms'
+  //   }
+  // })
 
   const submitBtn = document.getElementById('submit')
   submitBtn.addEventListener('click', function (e) {
@@ -249,7 +250,8 @@ $(document).ready(function () {
         field.value === 'Select the ' + field.name ||
         field.value === 'Your Annual ' + field.name ||
         field.value === 'Do you Smoke' ||
-        field.value === 'Date Of Birth*'
+        field.value === 'Date Of Birth*' ||
+        field.value === 'Select the State'
       ) {
         field.parentElement.classList.add('valerror')
         field.style.borderColor = 'red'
@@ -273,20 +275,17 @@ $(document).ready(function () {
       }
     }
    
-    // if (!isValid) {
-    //   condition.parentElement.classList.add('labelcolor')
-    //   // condition.parentElement.appendChild(creteElement)
-    //   tncMsg.style.display = 'none'
-    //   tncMsg.textContent = ''
-    // } else {
-    //   condition.parentElement.classList.remove('labelcolor')
-    //   if (!condition.checked) {
-    //     // Only show the message if the condition is not already checked
-    //     tncMsg.style.display = 'block'
-    //     tncMsg.textContent = 'Please Accept Terms'
-    //   }
-    // }
-
+    const tncMsg = document.getElementById('tnc-msg')
+  condition.addEventListener('change', (event) => {
+    if (event.target.checked) {
+      tncMsg.style.display = 'none'
+      tncMsg.textContent = ''
+      // alert('sss')
+    } else {
+      tncMsg.style.display = 'block';
+      tncMsg.textContent = 'Please Accept Terms'
+    }
+  })
 
     const isValid =
     // condition.disabled = !isValid
@@ -302,6 +301,26 @@ $(document).ready(function () {
     // &&
     // validateField(penEmpl, regexAlpha) &&
     // validateField(numEployer, regexAlpha)
+
+
+    condition.disabled = !isValid
+        if (!isValid) {
+      condition.parentElement.classList.add('labelcolor')
+      // condition.parentElement.appendChild(creteElement)
+      tncMsg.style.display = 'none'
+      tncMsg.textContent = ''
+    } else {
+      condition.parentElement.classList.remove('labelcolor')
+      // tncMsg.style.display = 'block'
+      // tncMsg.textContent = 'Please Accept Terms'
+      if (!condition.checked) {
+        console.log("Uncheck");
+        // Only show the message if the condition is not already checked
+        tncMsg.style.display = 'block'
+        tncMsg.textContent = 'Please Accept Terms'
+      }
+    }
+
 
     
   })
